@@ -1,24 +1,444 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TV & Movie Resources</title><style>body{margin:0;background:#09090f;color:#fff;font-family:system-ui,sans-serif}.wrap{max-width:760px;margin:auto;padding:24px}.box{margin-top:35px;background:#151520;border:1px solid #ffffff15;border-radius:22px;padding:28px}a{display:block;padding:15px;margin:11px 0;background:#8b5cf6;color:#fff;text-decoration:none;border-radius:12px;font-weight:700}.muted{color:#a7a7b7;line-height:1.6}.note{font-size:12px;color:#77778b}</style></head><body><div class="wrap"><div class="box"><h1>🎬 TV & Movie Resources</h1><p class="muted">Free/legal streaming and movie resources. Availability can vary by country.</p>
-<a href="https://tubitv.com/" target="_blank" rel="noopener">🎬 Tubi — Free Movies & TV</a>
-<a href="https://pluto.tv/" target="_blank" rel="noopener">📺 Pluto TV — Free TV & Movies</a>
-<a href="https://watch.plex.tv/" target="_blank" rel="noopener">🍿 Plex — Free Movies & TV</a>
-<a href="https://www.youtube.com/" target="_blank" rel="noopener">▶️ YouTube — Official Free Content</a>
-<a href="https://archive.org/details/movies" target="_blank" rel="noopener">📚 Internet Archive — Public-Domain/Archive Movies</a>
-<a href="https://www.kanopy.com/" target="_blank" rel="noopener">🎞️ Kanopy — Library/University Streaming</a>
-<a href="https://www.hoopladigital.com/" target="_blank" rel="noopener">📖 hoopla — Library Streaming</a>
-<a href="https://www.therokuchannel.roku.com/" target="_blank" rel="noopener">📺 The Roku Channel — Free Content</a>
-<a href="https://www.crunchyroll.com/" target="_blank" rel="noopener">🍥 Crunchyroll — Free Tier/Anime</a>
-<a href="https://www.shemaroo.com/" target="_blank" rel="noopener">🎥 Shemaroo — Indian Entertainment</a>
-<a href="https://cinejoy.to" target="_blank" rel="noopener">🎬 Cinejoy</a>
-<a href="https://www.movy.bz" target="_blank" rel="noopener">📺 Movy</a>
-<a href="https://popcornmovies.ac" target="_blank" rel="noopener">🍿 Popcorn Movies</a>
-<a href="https://shuttletv.su" target="_blank" rel="noopener">📺 Shuttle TV</a>
-<a href="https://reelix.ac" target="_blank" rel="noopener">🎞️ Reelix</a>
-<a href="https://moviebite.org" target="_blank" rel="noopener">🍿 MovieBite</a>
-<a href="https://streamo.pro" target="_blank" rel="noopener">🔍 Streamo</a>
-<a href="https://cinetaro.to" target="_blank" rel="noopener">🎬 Cinetaro</a>
-<a href="https://svstream.cc" target="_blank" rel="noopener">📺 SVStream</a>
-<a href="https://novera.tv" target="_blank" rel="noopener">📺 Novera TV</a>
-<p class="note"><p><footer>
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>TV & Movie Resources — Resource Vault</title>
+
+<meta name="description"
+content="A curated collection of free and legal TV, movie and streaming resources.">
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #0b0b12;
+  color: #f8f8ff;
+}
+
+.wrap {
+  max-width: 920px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HEADER */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  gap: 15px;
+}
+
+.brand {
+  font-weight: 800;
+}
+
+.tag {
+  border: 1px solid #ffffff22;
+  background: #ffffff0d;
+  padding: 7px 11px;
+  border-radius: 99px;
+  font-size: 12px;
+}
+
+/* NAVIGATION */
+
+.navlinks {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.navlinks a {
+  color: #aaaabd;
+  text-decoration: none;
+  border: 1px solid #ffffff12;
+  background: #ffffff08;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.navlinks a:hover {
+  color: #fff;
+  border-color: #8b5cf655;
+}
+
+/* MAIN CONTENT */
+
+.box {
+  margin-top: 35px;
+  background: #ffffff08;
+  border: 1px solid #ffffff12;
+  border-radius: 22px;
+  padding: 28px;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: clamp(32px, 7vw, 52px);
+  letter-spacing: -2px;
+}
+
+.intro {
+  color: #aaaabd;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* RESOURCE LINKS */
+
+.resource-link {
+  display: block;
+  padding: 15px;
+  margin: 11px 0;
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.resource-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* RESOURCE DESCRIPTION */
+
+.resource-description {
+  color: #aaaabd;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: -4px 0 15px;
+}
+
+/* NOTE */
+
+.note {
+  font-size: 12px;
+  color: #77778b;
+  line-height: 1.6;
+  margin-top: 25px;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  color: #77778b;
+  font-size: 12px;
+  padding: 30px;
+}
+
+.footerlinks {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.footerlinks a {
+  color: #aaaabd;
+  text-decoration: none;
+}
+
+.footerlinks a:hover {
+  color: #fff;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .box {
+    padding: 20px;
+    margin-top: 25px;
+  }
+
+  h1 {
+    letter-spacing: -1px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="wrap">
+
+
+<!-- HEADER -->
+
+<nav class="nav">
+
+  <div class="brand">
+    ⚡ RESOURCE VAULT
+  </div>
+
+  <div class="tag">
+    ₹1 ACCESS
+  </div>
+
+</nav>
+
+
+<!-- NAVIGATION -->
+
+<div class="navlinks">
+
+  <a href="index.html">Home</a>
+
+  <a href="access.html">Resources</a>
+
+  <a href="about.html">About</a>
+
+  <a href="contact.html">Contact</a>
+
+  <a href="privacy.html">Privacy</a>
+
+  <a href="terms.html">Terms</a>
+
+</div>
+
+
+<!-- RESOURCE CONTENT -->
+
+<div class="box">
+
+  <h1>
+    🎬 TV & Movie Resources
+  </h1>
+
+  <p class="intro">
+    Explore free and legal movie, TV and streaming resources.
+    Availability and content can vary depending on your country,
+    library membership or service availability.
+  </p>
+
+
+  <!-- TUBI -->
+
+  <a
+    class="resource-link"
+    href="https://tubitv.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    🎬 Tubi — Free Movies & TV
+  </a>
+
+  <p class="resource-description">
+    Free movies and TV content where the service is available.
+  </p>
+
+
+  <!-- PLUTO TV -->
+
+  <a
+    class="resource-link"
+    href="https://pluto.tv/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    📺 Pluto TV — Free TV & Movies
+  </a>
+
+  <p class="resource-description">
+    Free streaming channels and on-demand entertainment.
+  </p>
+
+
+  <!-- PLEX -->
+
+  <a
+    class="resource-link"
+    href="https://watch.plex.tv/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    🍿 Plex — Free Movies & TV
+  </a>
+
+  <p class="resource-description">
+    Watch free movies and TV shows available through Plex.
+  </p>
+
+
+  <!-- YOUTUBE -->
+
+  <a
+    class="resource-link"
+    href="https://www.youtube.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    ▶️ YouTube — Official Free Content
+  </a>
+
+  <p class="resource-description">
+    Discover official channels, free programs and legally uploaded content.
+  </p>
+
+
+  <!-- INTERNET ARCHIVE -->
+
+  <a
+    class="resource-link"
+    href="https://archive.org/details/movies"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    📚 Internet Archive — Movies & Archive Collection
+  </a>
+
+  <p class="resource-description">
+    Explore movies and video collections that are available through the Internet Archive.
+  </p>
+
+
+  <!-- KANOPY -->
+
+  <a
+    class="resource-link"
+    href="https://www.kanopy.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    🎞️ Kanopy — Library & University Streaming
+  </a>
+
+  <p class="resource-description">
+    Streaming service available through participating libraries and universities.
+  </p>
+
+
+  <!-- HOOPLA -->
+
+  <a
+    class="resource-link"
+    href="https://www.hoopladigital.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    📖 hoopla — Library Streaming
+  </a>
+
+  <p class="resource-description">
+    Access movies, TV and other digital media through participating libraries.
+  </p>
+
+
+  <!-- ROKU -->
+
+  <a
+    class="resource-link"
+    href="https://www.therokuchannel.roku.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    📺 The Roku Channel — Free Content
+  </a>
+
+  <p class="resource-description">
+    Free entertainment and streaming content where available.
+  </p>
+
+
+  <!-- CRUNCHYROLL -->
+
+  <a
+    class="resource-link"
+    href="https://www.crunchyroll.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    🍥 Crunchyroll — Anime
+  </a>
+
+  <p class="resource-description">
+    Anime streaming with availability depending on region and plan.
+  </p>
+
+
+  <!-- SHEMAROO -->
+
+  <a
+    class="resource-link"
+    href="https://www.shemaroo.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    🎥 Shemaroo — Indian Entertainment
+  </a>
+
+  <p class="resource-description">
+    Explore Indian movies, entertainment and other official content.
+  </p>
+
+
+  <!-- INFORMATION NOTE -->
+
+  <p class="note">
+    Resource Vault does not host or upload movies or TV shows.
+    These links direct visitors to external services.
+    Availability, pricing, advertisements and regional access
+    are controlled by the respective services.
+  </p>
+
+  <p class="note">
+    Please use these services according to their own terms,
+    copyright rules and regional availability.
+  </p>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footerlinks">
+
+    <a href="index.html">Home</a>
+
+    <a href="access.html">Resources</a>
+
+    <a href="about.html">About</a>
+
+    <a href="contact.html">Contact</a>
+
+    <a href="privacy.html">Privacy</a>
+
+    <a href="terms.html">Terms</a>
+
+  </div>
+
   © 2026 ABQ Online.
-</footer></p></div></div></body></html>
+
+</footer>
+
+
+</div>
+
+</body>
+
+</html>
