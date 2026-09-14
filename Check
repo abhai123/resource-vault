@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Resource Vault — ₹1 Access</title>
+
+<meta name="description"
+content="Resource Vault — a curated collection of useful, free and legal online resources.">
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #0b0b12;
+  color: #f8f8ff;
+}
+
+.wrap {
+  max-width: 920px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HEADER */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  gap: 15px;
+}
+
+.brand {
+  font-weight: 800;
+}
+
+.tag {
+  border: 1px solid #ffffff22;
+  background: #ffffff0d;
+  padding: 7px 11px;
+  border-radius: 99px;
+  font-size: 12px;
+}
+
+/* NAVIGATION */
+
+.navlinks {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.navlinks a {
+  color: #aaaabd;
+  text-decoration: none;
+  border: 1px solid #ffffff12;
+  background: #ffffff08;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.navlinks a:hover {
+  color: #fff;
+  border-color: #8b5cf655;
+}
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 65px 10px 55px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 99px;
+  background: #8b5cf622;
+  border: 1px solid #8b5cf655;
+  color: #d9c7ff;
+  font-size: 13px;
+}
+
+h1 {
+  font-size: clamp(44px, 9vw, 78px);
+  line-height: 1;
+  margin: 18px 0;
+  letter-spacing: -3px;
+}
+
+.grad {
+  background: linear-gradient(90deg, #fff, #c4b5fd, #f9a8d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sub {
+  max-width: 640px;
+  margin: auto;
+  color: #aaaabd;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* PAYMENT BUTTON */
+
+.cta {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 16px 25px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0 12px 35px #8b5cf633;
+  transition: transform 0.2s;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+}
+
+/* RESOURCE GRID */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 35px;
+}
+
+.card {
+  display: block;
+  background: #ffffff08;
+  border: 1px solid #ffffff12;
+  border-radius: 20px;
+  padding: 23px;
+  text-decoration: none;
+  color: #f8f8ff;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #8b5cf655;
+}
+
+.card.locked {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.icon {
+  font-size: 28px;
+}
+
+.card h3 {
+  margin: 10px 0 6px;
+}
+
+.card p {
+  color: #aaaabd;
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* INFORMATION SECTIONS */
+
+.section {
+  margin: 15px 0;
+  background: #ffffff08;
+  border: 1px solid #ffffff12;
+  border-radius: 20px;
+  padding: 23px;
+}
+
+.section h2 {
+  margin-top: 0;
+}
+
+.section p {
+  color: #aaaabd;
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  color: #77778b;
+  font-size: 12px;
+  padding: 30px;
+}
+
+.footerlinks {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.footerlinks a {
+  color: #aaaabd;
+  text-decoration: none;
+}
+
+.footerlinks a:hover {
+  color: #fff;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 50px;
+  }
+
+  h1 {
+    letter-spacing: -2px;
+  }
+
+  .nav {
+    align-items: flex-start;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<!-- HEADER -->
+
+<nav class="nav">
+
+  <div class="brand">
+    ⚡ RESOURCE VAULT
+  </div>
+
+  <div class="tag">
+    ₹1 ACCESS
+  </div>
+
+</nav>
+
+
+<!-- NAVIGATION -->
+
+<div class="navlinks">
+
+  <a href="index.html">Home</a>
+
+  <a href="access.html">Resources</a>
+
+  <a href="about.html">About</a>
+
+  <a href="contact.html">Contact</a>
+
+  <a href="privacy.html">Privacy</a>
+
+  <a href="terms.html">Terms</a>
+
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="badge">
+    ONE-TIME ACCESS • MOBILE FRIENDLY
+  </div>
+
+  <h1>
+    Unlock the <span class="grad">Vault.</span>
+  </h1>
+
+  <p class="sub">
+    A curated collection of useful, free and legal resources,
+    organised in one place.
+  </p>
+
+  <a
+    class="cta"
+    href="upi://pay?pa=abhaivipper59-1@okaxis"
+  >
+    GET ACCESS FOR ₹1
+  </a>
+
+</section>
+
+
+<!-- RESOURCE CATEGORIES -->
+
+<section class="grid">
+
+
+  <!-- TV & MOVIE -->
+
+  <a
+    class="card"
+    href="access.html"
+  >
+
+    <div class="icon">
+      📺
+    </div>
+
+    <h3>
+      TV & Movie
+    </h3>
+
+    <p>
+      Free and legal movie, TV and streaming discovery resources.
+    </p>
+
+    <span class="status">
+      🔓 ACCESS
+    </span>
+
+  </a>
+
+
+  <!-- AI TOOLS -->
+
+  <div class="card locked">
+
+    <div class="icon">
+      🔒
+    </div>
+
+    <h3>
+      AI Tools
+    </h3>
+
+    <p>
+      AI websites and useful tools.
+    </p>
+
+    <span class="status">
+      🔒 LOCKED
+    </span>
+
+  </div>
+
+
+  <!-- CREATOR TOOLS -->
+
+  <div class="card locked">
+
+    <div class="icon">
+      🔒
+    </div>
+
+    <h3>
+      Creator Tools
+    </h3>
+
+    <p>
+      Tools for images, video, editing and content creation.
+    </p>
+
+    <span class="status">
+      🔒 LOCKED
+    </span>
+
+  </div>
+
+
+  <!-- OTHER TOOLS -->
+
+  <div class="card locked">
+
+    <div class="icon">
+      🔒
+    </div>
+
+    <h3>
+      Other Tools
+    </h3>
+
+    <p>
+      Useful websites and resources.
+    </p>
+
+    <span class="status">
+      🔒 LOCKED
+    </span>
+
+  </div>
+
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="section">
+
+  <h2>
+    How it works
+  </h2>
+
+  <p>
+
+    1️⃣ Tap <b>Get Access for ₹1</b>.<br>
+
+    2️⃣ Complete your payment.<br>
+
+    3️⃣ Follow the access instructions provided after payment.<br>
+
+    4️⃣ Open and bookmark the Resource Vault.
+
+  </p>
+
+</section>
+
+
+<!-- WHAT YOU GET -->
+
+<section class="section">
+
+  <h2>
+    What you'll get
+  </h2>
+
+  <p>
+    Regularly updated collections of useful resources.
+    Only resources that are legitimately free to access or that
+    you have permission to share should be included.
+  </p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footerlinks">
+
+    <a href="index.html">Home</a>
+
+    <a href="access.html">Resources</a>
+
+    <a href="about.html">About</a>
+
+    <a href="contact.html">Contact</a>
+
+    <a href="privacy.html">Privacy</a>
+
+    <a href="terms.html">Terms</a>
+
+  </div>
+
+  © 2026 ABQ Online.
+
+</footer>
+
+</div>
+
+</body>
+</html>
