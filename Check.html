@@ -115,11 +115,18 @@ h1 {
   line-height: 1.6;
 }
 
-/* PAYMENT BUTTON */
+/* PAYMENT BUTTONS */
+
+.button-group {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
 
 .cta {
   display: inline-block;
-  margin-top: 28px;
   padding: 16px 25px;
   border-radius: 14px;
   background: linear-gradient(135deg, #8b5cf6, #ec4899);
@@ -132,6 +139,29 @@ h1 {
 
 .cta:hover {
   transform: translateY(-2px);
+}
+
+.access-btn {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 14px;
+  background: #ffffff12;
+  border: 1px solid #8b5cf655;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.access-btn:hover {
+  background: #8b5cf622;
+  transform: translateY(-2px);
+}
+
+.payment-note {
+  color: #77778b;
+  font-size: 12px;
+  margin-top: 3px;
 }
 
 /* RESOURCE GRID */
@@ -250,23 +280,7 @@ footer {
   .nav {
     align-items: flex-start;
   }
-.access-btn {
-  display: inline-block;
-  margin-top: 14px;
-  padding: 14px 22px;
-  border-radius: 14px;
-  background: #ffffff12;
-  border: 1px solid #8b5cf655;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  transition: 0.2s;
-}
 
-.access-btn:hover {
-  background: #8b5cf622;
-  transform: translateY(-2px);
-}
 }
 
 </style>
@@ -326,9 +340,31 @@ footer {
     A curated collection of useful, free and legal resources,
     organised in one place.
   </p>
-<a class="access-btn" href="access.html">
-  I HAVE PAID — OPEN ACCESS
-</a>
+
+
+  <!-- PAYMENT + ACCESS BUTTONS -->
+
+  <div class="button-group">
+
+    <a
+      class="cta"
+      href="upi://pay?pa=abhaivipper59-1@okaxis&pn=ABQ%20Online&am=1&cu=INR"
+    >
+      PAY ₹1 & GET ACCESS
+    </a>
+
+    <a
+      class="access-btn"
+      href="access.html"
+    >
+      I HAVE PAID — OPEN ACCESS
+    </a>
+
+    <div class="payment-note">
+      After completing the ₹1 payment, tap the button above to open the resources.
+    </div>
+
+  </div>
 
 </section>
 
@@ -446,11 +482,12 @@ footer {
 
   <p>
 
-    1️⃣ Tap <b>Get Access for ₹1</b>.<br>
+    1️⃣ Tap <b>Pay ₹1 & Get Access</b>.<br>
 
-    2️⃣ Complete your payment.<br>
+    2️⃣ Complete the ₹1 UPI payment.<br>
 
-    3️⃣ Follow the access instructions provided after payment.<br>
+    3️⃣ Return to this page and tap
+    <b>I Have Paid — Open Access</b>.<br>
 
     4️⃣ Open and bookmark the Resource Vault.
 
