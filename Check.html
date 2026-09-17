@@ -6,10 +6,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>TV & Movie Resources — Resource Vault</title>
+<title>Resource Vault — ₹1 Access</title>
 
 <meta name="description"
-content="A curated collection of free and legal TV, movie and streaming resources.">
+content="Resource Vault — a curated collection of useful, free and legal resources.">
 
 <style>
 
@@ -77,63 +77,134 @@ body {
   border-color: #8b5cf655;
 }
 
-/* MAIN CONTENT */
+/* HERO */
 
-.box {
-  margin-top: 35px;
-  background: #ffffff08;
-  border: 1px solid #ffffff12;
-  border-radius: 22px;
-  padding: 28px;
+.hero {
+  text-align: center;
+  padding: 75px 10px 55px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 99px;
+  background: #8b5cf622;
+  border: 1px solid #8b5cf655;
+  color: #d9c7ff;
+  font-size: 13px;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: clamp(32px, 7vw, 52px);
-  letter-spacing: -2px;
+  font-size: clamp(44px, 9vw, 78px);
+  line-height: 1;
+  margin: 18px 0;
+  letter-spacing: -3px;
 }
 
-.intro {
+.grad {
+  background: linear-gradient(90deg, #fff, #c4b5fd, #f9a8d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sub {
+  max-width: 640px;
+  margin: auto;
   color: #aaaabd;
+  font-size: 18px;
   line-height: 1.6;
-  margin-bottom: 25px;
 }
 
-/* RESOURCE LINKS */
+/* ACCESS BUTTON */
 
-.resource-link {
-  display: block;
-  padding: 15px;
-  margin: 11px 0;
-  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+.access-btn {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 16px 25px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
   color: #fff;
   text-decoration: none;
-  border-radius: 12px;
-  font-weight: 700;
+  font-weight: 800;
+  box-shadow: 0 12px 35px #8b5cf633;
   transition: transform 0.2s, opacity 0.2s;
 }
 
-.resource-link:hover {
+.access-btn:hover {
   transform: translateY(-2px);
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
-/* RESOURCE DESCRIPTION */
+/* RESOURCE GRID */
 
-.resource-description {
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 35px;
+}
+
+.card {
+  display: block;
+  background: #ffffff08;
+  border: 1px solid #ffffff12;
+  border-radius: 20px;
+  padding: 23px;
+  text-decoration: none;
+  color: #f8f8ff;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #8b5cf655;
+}
+
+.card.locked {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.icon {
+  font-size: 28px;
+}
+
+.card h3 {
+  margin: 10px 0 6px;
+}
+
+.card p {
   color: #aaaabd;
-  font-size: 13px;
-  line-height: 1.5;
-  margin: -4px 0 15px;
+  line-height: 1.55;
+  font-size: 14px;
 }
 
-/* NOTE */
-
-.note {
+.status {
+  display: inline-block;
+  margin-top: 8px;
   font-size: 12px;
-  color: #77778b;
-  line-height: 1.6;
-  margin-top: 25px;
+  font-weight: 700;
+}
+
+/* SECTIONS */
+
+.section {
+  margin: 15px 0;
+  background: #ffffff08;
+  border: 1px solid #ffffff12;
+  border-radius: 20px;
+  padding: 23px;
+}
+
+.section h2 {
+  margin-top: 0;
+}
+
+.section p {
+  color: #aaaabd;
+  line-height: 1.55;
+  font-size: 14px;
 }
 
 /* FOOTER */
@@ -166,13 +237,16 @@ footer {
 
 @media (max-width: 700px) {
 
-  .box {
-    padding: 20px;
-    margin-top: 25px;
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 50px;
   }
 
   h1 {
-    letter-spacing: -1px;
+    letter-spacing: -2px;
   }
 
 }
@@ -220,196 +294,166 @@ footer {
 </div>
 
 
-<!-- RESOURCE CONTENT -->
+<!-- HERO -->
 
-<div class="box">
+<section class="hero">
+
+  <div class="badge">
+    ONE-TIME ACCESS • MOBILE FRIENDLY
+  </div>
 
   <h1>
-    🎬 TV & Movie Resources
+    Unlock the <span class="grad">Vault.</span>
   </h1>
 
-  <p class="intro">
-    Explore free and legal movie, TV and streaming resources.
-    Availability and content can vary depending on your country,
-    library membership or service availability.
+  <p class="sub">
+    A curated collection of useful, free and legal resources,
+    organised in one place.
   </p>
 
 
-  <!-- TUBI -->
+  <!-- PAID ACCESS BUTTON -->
 
-  <a
-    class="resource-link"
-    href="https://tubitv.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    🎬 Tubi — Free Movies & TV
+  <a class="access-btn" href="access.html">
+    I HAVE PAID — OPEN ACCESS
   </a>
 
-  <p class="resource-description">
-    Free movies and TV content where the service is available.
-  </p>
+</section>
 
 
-  <!-- PLUTO TV -->
+<!-- RESOURCE CARDS -->
 
-  <a
-    class="resource-link"
-    href="https://pluto.tv/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    📺 Pluto TV — Free TV & Movies
+<section class="grid">
+
+
+  <!-- TV & MOVIE - DIRECT ACCESS -->
+
+  <a class="card" href="access.html">
+
+    <div class="icon">
+      📺
+    </div>
+
+    <h3>
+      TV & Movie
+    </h3>
+
+    <p>
+      Free and legal movie, TV and streaming discovery resources.
+    </p>
+
+    <span class="status">
+      🔓 ACCESS
+    </span>
+
   </a>
 
-  <p class="resource-description">
-    Free streaming channels and on-demand entertainment.
+
+  <!-- AI TOOLS - LOCKED -->
+
+  <div class="card locked">
+
+    <div class="icon">
+      🔒
+    </div>
+
+    <h3>
+      AI Tools
+    </h3>
+
+    <p>
+      AI websites and useful tools.
+    </p>
+
+    <span class="status">
+      🔒 LOCKED
+    </span>
+
+  </div>
+
+
+  <!-- CREATOR TOOLS - LOCKED -->
+
+  <div class="card locked">
+
+    <div class="icon">
+      🔒
+    </div>
+
+    <h3>
+      Creator Tools
+    </h3>
+
+    <p>
+      Tools for images, video, editing and content creation.
+    </p>
+
+    <span class="status">
+      🔒 LOCKED
+    </span>
+
+  </div>
+
+
+  <!-- OTHER TOOLS - LOCKED -->
+
+  <div class="card locked">
+
+    <div class="icon">
+      🔒
+    </div>
+
+    <h3>
+      Other Tools
+    </h3>
+
+    <p>
+      Useful websites and resources.
+    </p>
+
+    <span class="status">
+      🔒 LOCKED
+    </span>
+
+  </div>
+
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="section">
+
+  <h2>
+    How it works
+  </h2>
+
+  <p>
+    1️⃣ Complete the ₹1 payment.<br>
+    2️⃣ Return to this page.<br>
+    3️⃣ Tap <b>I HAVE PAID — OPEN ACCESS</b>.<br>
+    4️⃣ Open and bookmark the Resource Vault.
   </p>
 
+</section>
 
-  <!-- PLEX -->
 
-  <a
-    class="resource-link"
-    href="https://watch.plex.tv/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    🍿 Plex — Free Movies & TV
-  </a>
+<!-- WHAT YOU'LL GET -->
 
-  <p class="resource-description">
-    Watch free movies and TV shows available through Plex.
+<section class="section">
+
+  <h2>
+    What you'll get
+  </h2>
+
+  <p>
+    Regularly updated collections of useful resources.
+    Only resources that are legitimately free to access or that
+    you have permission to share should be included.
   </p>
 
-
-  <!-- YOUTUBE -->
-
-  <a
-    class="resource-link"
-    href="https://www.youtube.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    ▶️ YouTube — Official Free Content
-  </a>
-
-  <p class="resource-description">
-    Discover official channels, free programs and legally uploaded content.
-  </p>
-
-
-  <!-- INTERNET ARCHIVE -->
-
-  <a
-    class="resource-link"
-    href="https://archive.org/details/movies"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    📚 Internet Archive — Movies & Archive Collection
-  </a>
-
-  <p class="resource-description">
-    Explore movies and video collections that are available through the Internet Archive.
-  </p>
-
-
-  <!-- KANOPY -->
-
-  <a
-    class="resource-link"
-    href="https://www.kanopy.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    🎞️ Kanopy — Library & University Streaming
-  </a>
-
-  <p class="resource-description">
-    Streaming service available through participating libraries and universities.
-  </p>
-
-
-  <!-- HOOPLA -->
-
-  <a
-    class="resource-link"
-    href="https://www.hoopladigital.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    📖 hoopla — Library Streaming
-  </a>
-
-  <p class="resource-description">
-    Access movies, TV and other digital media through participating libraries.
-  </p>
-
-
-  <!-- ROKU -->
-
-  <a
-    class="resource-link"
-    href="https://www.therokuchannel.roku.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    📺 The Roku Channel — Free Content
-  </a>
-
-  <p class="resource-description">
-    Free entertainment and streaming content where available.
-  </p>
-
-
-  <!-- CRUNCHYROLL -->
-
-  <a
-    class="resource-link"
-    href="https://www.crunchyroll.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    🍥 Crunchyroll — Anime
-  </a>
-
-  <p class="resource-description">
-    Anime streaming with availability depending on region and plan.
-  </p>
-
-
-  <!-- SHEMAROO -->
-
-  <a
-    class="resource-link"
-    href="https://www.shemaroo.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    🎥 Shemaroo — Indian Entertainment
-  </a>
-
-  <p class="resource-description">
-    Explore Indian movies, entertainment and other official content.
-  </p>
-
-
-  <!-- INFORMATION NOTE -->
-
-  <p class="note">
-    Resource Vault does not host or upload movies or TV shows.
-    These links direct visitors to external services.
-    Availability, pricing, advertisements and regional access
-    are controlled by the respective services.
-  </p>
-
-  <p class="note">
-    Please use these services according to their own terms,
-    copyright rules and regional availability.
-  </p>
-
-</div>
+</section>
 
 
 <!-- FOOTER -->
