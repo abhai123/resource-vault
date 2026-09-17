@@ -6,10 +6,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>TV & Movie Resources — Resource Vault</title>
+<title>Resource Vault — Categories</title>
 
 <meta name="description"
-content="A curated collection of free and legal TV, movie and streaming resources.">
+content="Explore the Resource Vault categories including TV & Movie, AI Tools, Creator Tools and Other Tools.">
 
 <style>
 
@@ -77,63 +77,113 @@ body {
   border-color: #8b5cf655;
 }
 
-/* MAIN CONTENT */
+/* HERO */
 
-.box {
-  margin-top: 35px;
-  background: #ffffff08;
-  border: 1px solid #ffffff12;
-  border-radius: 22px;
-  padding: 28px;
+.hero {
+  text-align: center;
+  padding: 55px 10px 35px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 99px;
+  background: #8b5cf622;
+  border: 1px solid #8b5cf655;
+  color: #d9c7ff;
+  font-size: 13px;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: clamp(32px, 7vw, 52px);
+  font-size: clamp(36px, 8vw, 60px);
+  line-height: 1;
+  margin: 18px 0;
   letter-spacing: -2px;
 }
 
+.grad {
+  background: linear-gradient(90deg, #fff, #c4b5fd, #f9a8d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .intro {
+  max-width: 650px;
+  margin: auto;
   color: #aaaabd;
+  font-size: 17px;
   line-height: 1.6;
-  margin-bottom: 25px;
 }
 
-/* RESOURCE LINKS */
+/* CATEGORY GRID */
 
-.resource-link {
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 25px 0 40px;
+}
+
+.category {
   display: block;
-  padding: 15px;
-  margin: 11px 0;
-  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
-  color: #fff;
+  background: #ffffff08;
+  border: 1px solid #ffffff12;
+  border-radius: 20px;
+  padding: 25px;
+  color: #f8f8ff;
   text-decoration: none;
-  border-radius: 12px;
-  font-weight: 700;
-  transition: transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s, border-color 0.2s;
 }
 
-.resource-link:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+.category:hover {
+  transform: translateY(-4px);
+  border-color: #8b5cf655;
 }
 
-/* RESOURCE DESCRIPTION */
+.icon {
+  font-size: 34px;
+  margin-bottom: 8px;
+}
 
-.resource-description {
+.category h2 {
+  margin: 5px 0 8px;
+  font-size: 22px;
+}
+
+.category p {
+  margin: 0;
   color: #aaaabd;
-  font-size: 13px;
-  line-height: 1.5;
-  margin: -4px 0 15px;
+  line-height: 1.55;
+  font-size: 14px;
 }
 
-/* NOTE */
+.open {
+  display: inline-block;
+  margin-top: 16px;
+  color: #c4b5fd;
+  font-size: 13px;
+  font-weight: 700;
+}
 
-.note {
-  font-size: 12px;
-  color: #77778b;
+/* INFO BOX */
+
+.info {
+  background: #ffffff08;
+  border: 1px solid #ffffff12;
+  border-radius: 20px;
+  padding: 23px;
+  margin-bottom: 20px;
+}
+
+.info h2 {
+  margin-top: 0;
+}
+
+.info p {
+  color: #aaaabd;
   line-height: 1.6;
-  margin-top: 25px;
+  font-size: 14px;
 }
 
 /* FOOTER */
@@ -166,9 +216,12 @@ footer {
 
 @media (max-width: 700px) {
 
-  .box {
-    padding: 20px;
-    margin-top: 25px;
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 35px;
   }
 
   h1 {
@@ -195,7 +248,7 @@ footer {
   </div>
 
   <div class="tag">
-    ₹1 ACCESS
+    ₹0 ACCESS
   </div>
 
 </nav>
@@ -220,196 +273,144 @@ footer {
 </div>
 
 
-<!-- RESOURCE CONTENT -->
+<!-- HERO -->
 
-<div class="box">
+<section class="hero">
+
+  <div class="badge">
+    RESOURCE CATEGORIES • MOBILE FRIENDLY
+  </div>
 
   <h1>
-    🎬 TV & Movie Resources
+    Explore the <span class="grad">Vault.</span>
   </h1>
 
   <p class="intro">
-    Explore free and legal movie, TV and streaming resources.
-    Availability and content can vary depending on your country,
-    library membership or service availability.
+    Choose a category below to explore the resources available
+    in the Resource Vault.
   </p>
 
+</section>
 
-  <!-- TUBI -->
 
-  <a
-    class="resource-link"
-    href="https://tubitv.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    🎬 Tubi — Free Movies & TV
+<!-- CATEGORY GRID -->
+
+<section class="grid">
+
+
+  <!-- TV & MOVIE -->
+
+  <a class="category" href="tv-movie.html">
+
+    <div class="icon">
+      📺
+    </div>
+
+    <h2>
+      TV & Movie
+    </h2>
+
+    <p>
+      Discover free and legal movie, TV and streaming resources.
+    </p>
+
+    <span class="open">
+      OPEN CATEGORY →
+    </span>
+
   </a>
 
-  <p class="resource-description">
-    Free movies and TV content where the service is available.
-  </p>
 
+  <!-- AI TOOLS -->
 
-  <!-- PLUTO TV -->
+  <a class="category" href="ai-tools.html">
 
-  <a
-    class="resource-link"
-    href="https://pluto.tv/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    📺 Pluto TV — Free TV & Movies
+    <div class="icon">
+      🤖
+    </div>
+
+    <h2>
+      AI Tools
+    </h2>
+
+    <p>
+      Explore useful AI websites, assistants and productivity tools.
+    </p>
+
+    <span class="open">
+      OPEN CATEGORY →
+    </span>
+
   </a>
 
-  <p class="resource-description">
-    Free streaming channels and on-demand entertainment.
-  </p>
 
+  <!-- CREATOR TOOLS -->
 
-  <!-- PLEX -->
+  <a class="category" href="creator-tools.html">
 
-  <a
-    class="resource-link"
-    href="https://watch.plex.tv/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    🍿 Plex — Free Movies & TV
+    <div class="icon">
+      🎨
+    </div>
+
+    <h2>
+      Creator Tools
+    </h2>
+
+    <p>
+      Tools for images, video, editing, design and content creation.
+    </p>
+
+    <span class="open">
+      OPEN CATEGORY →
+    </span>
+
   </a>
 
-  <p class="resource-description">
-    Watch free movies and TV shows available through Plex.
-  </p>
 
+  <!-- OTHER TOOLS -->
 
-  <!-- YOUTUBE -->
+  <a class="category" href="other-tools.html">
 
-  <a
-    class="resource-link"
-    href="https://www.youtube.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    ▶️ YouTube — Official Free Content
+    <div class="icon">
+      🛠️
+    </div>
+
+    <h2>
+      Other Tools
+    </h2>
+
+    <p>
+      Useful websites, utilities and other online resources.
+    </p>
+
+    <span class="open">
+      OPEN CATEGORY →
+    </span>
+
   </a>
 
-  <p class="resource-description">
-    Discover official channels, free programs and legally uploaded content.
+
+</section>
+
+
+<!-- INFORMATION -->
+
+<section class="info">
+
+  <h2>
+    📚 What's inside?
+  </h2>
+
+  <p>
+    The Resource Vault is organised into different categories
+    so you can quickly find the type of resource you are looking for.
   </p>
 
-
-  <!-- INTERNET ARCHIVE -->
-
-  <a
-    class="resource-link"
-    href="https://archive.org/details/movies"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    📚 Internet Archive — Movies & Archive Collection
-  </a>
-
-  <p class="resource-description">
-    Explore movies and video collections that are available through the Internet Archive.
+  <p>
+    New resources and categories can be added and updated over time.
   </p>
 
-
-  <!-- KANOPY -->
-
-  <a
-    class="resource-link"
-    href="https://www.kanopy.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    🎞️ Kanopy — Library & University Streaming
-  </a>
-
-  <p class="resource-description">
-    Streaming service available through participating libraries and universities.
-  </p>
-
-
-  <!-- HOOPLA -->
-
-  <a
-    class="resource-link"
-    href="https://www.hoopladigital.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    📖 hoopla — Library Streaming
-  </a>
-
-  <p class="resource-description">
-    Access movies, TV and other digital media through participating libraries.
-  </p>
-
-
-  <!-- ROKU -->
-
-  <a
-    class="resource-link"
-    href="https://www.therokuchannel.roku.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    📺 The Roku Channel — Free Content
-  </a>
-
-  <p class="resource-description">
-    Free entertainment and streaming content where available.
-  </p>
-
-
-  <!-- CRUNCHYROLL -->
-
-  <a
-    class="resource-link"
-    href="https://www.crunchyroll.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    🍥 Crunchyroll — Anime
-  </a>
-
-  <p class="resource-description">
-    Anime streaming with availability depending on region and plan.
-  </p>
-
-
-  <!-- SHEMAROO -->
-
-  <a
-    class="resource-link"
-    href="https://www.shemaroo.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    🎥 Shemaroo — Indian Entertainment
-  </a>
-
-  <p class="resource-description">
-    Explore Indian movies, entertainment and other official content.
-  </p>
-
-
-  <!-- INFORMATION NOTE -->
-
-  <p class="note">
-    Resource Vault does not host or upload movies or TV shows.
-    These links direct visitors to external services.
-    Availability, pricing, advertisements and regional access
-    are controlled by the respective services.
-  </p>
-
-  <p class="note">
-    Please use these services according to their own terms,
-    copyright rules and regional availability.
-  </p>
-
-</div>
+</section>
 
 
 <!-- FOOTER -->
