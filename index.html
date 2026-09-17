@@ -1,12 +1,18 @@
 <!doctype html>
 <html lang="en">
+
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Resource Vault — ₹1 Access</title>
-<meta name="description" content="Unlock the Resource Vault for ₹1.">
+
+<meta name="description"
+content="Resource Vault — a curated collection of useful, free and legal resources.">
 
 <style>
+
 * {
   box-sizing: border-box;
 }
@@ -24,11 +30,14 @@ body {
   padding: 20px;
 }
 
+/* HEADER */
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
+  gap: 15px;
 }
 
 .brand {
@@ -42,6 +51,33 @@ body {
   border-radius: 99px;
   font-size: 12px;
 }
+
+/* NAVIGATION */
+
+.navlinks {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.navlinks a {
+  color: #aaaabd;
+  text-decoration: none;
+  border: 1px solid #ffffff12;
+  background: #ffffff08;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.navlinks a:hover {
+  color: #fff;
+  border-color: #8b5cf655;
+}
+
+/* HERO */
 
 .hero {
   text-align: center;
@@ -80,7 +116,9 @@ h1 {
   line-height: 1.6;
 }
 
-.cta {
+/* ACCESS BUTTON */
+
+.access-btn {
   display: inline-block;
   margin-top: 28px;
   padding: 16px 25px;
@@ -90,7 +128,15 @@ h1 {
   text-decoration: none;
   font-weight: 800;
   box-shadow: 0 12px 35px #8b5cf633;
+  transition: transform 0.2s, opacity 0.2s;
 }
+
+.access-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+/* RESOURCE GRID */
 
 .grid {
   display: grid;
@@ -100,6 +146,7 @@ h1 {
 }
 
 .card {
+  display: block;
   background: #ffffff08;
   border: 1px solid #ffffff12;
   border-radius: 20px;
@@ -140,6 +187,8 @@ h1 {
   font-weight: 700;
 }
 
+/* SECTIONS */
+
 .section {
   margin: 15px 0;
   background: #ffffff08;
@@ -158,6 +207,8 @@ h1 {
   font-size: 14px;
 }
 
+/* FOOTER */
+
 footer {
   text-align: center;
   color: #77778b;
@@ -165,7 +216,27 @@ footer {
   padding: 30px;
 }
 
+.footerlinks {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.footerlinks a {
+  color: #aaaabd;
+  text-decoration: none;
+}
+
+.footerlinks a:hover {
+  color: #fff;
+}
+
+/* MOBILE */
+
 @media (max-width: 700px) {
+
   .grid {
     grid-template-columns: 1fr;
   }
@@ -177,161 +248,241 @@ footer {
   h1 {
     letter-spacing: -2px;
   }
+
 }
+
 </style>
+
 </head>
 
 <body>
 
 <div class="wrap">
 
-  <nav class="nav">
-    <div class="brand">⚡ RESOURCE VAULT</div>
-    <div class="tag">₹1 ACCESS</div>
-  </nav>
 
-  <section class="hero">
+<!-- HEADER -->
 
-    <div class="badge">
-      ONE-TIME ACCESS • MOBILE FRIENDLY
+<nav class="nav">
+
+  <div class="brand">
+    ⚡ RESOURCE VAULT
+  </div>
+
+  <div class="tag">
+    ₹1 ACCESS
+  </div>
+
+</nav>
+
+
+<!-- NAVIGATION -->
+
+<div class="navlinks">
+
+  <a href="index.html">Home</a>
+
+  <a href="access.html">Resources</a>
+
+  <a href="about.html">About</a>
+
+  <a href="contact.html">Contact</a>
+
+  <a href="privacy.html">Privacy</a>
+
+  <a href="terms.html">Terms</a>
+
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="badge">
+    ONE-TIME ACCESS • MOBILE FRIENDLY
+  </div>
+
+  <h1>
+    Unlock the <span class="grad">Vault.</span>
+  </h1>
+
+  <p class="sub">
+    A curated collection of useful, free and legal resources,
+    organised in one place.
+  </p>
+
+
+  <!-- PAID ACCESS BUTTON -->
+
+  <a class="access-btn" href="access.html">
+    I HAVE PAID — OPEN ACCESS
+  </a>
+
+</section>
+
+
+<!-- RESOURCE CARDS -->
+
+<section class="grid">
+
+
+  <!-- TV & MOVIE - DIRECT ACCESS -->
+
+  <a class="card" href="access.html">
+
+    <div class="icon">
+      📺
     </div>
 
-    <h1>
-      Unlock the <span class="grad">Vault.</span>
-    </h1>
-
-    <p class="sub">
-      A curated collection of useful, free and legal resources,
-      organised in one place.
-    </p>
-
-    <a class="cta" href="access.html">
-      🔓 GET ACCESS FOR ₹0
-    </a>
-
-  </section>
-
-
-  <section class="grid">
-
-    <!-- TV & MOVIE - UNLOCKED -->
-    <a class="card locked">
-
-      <div class="icon">📺</div>
-
-      <h3>
-        TV & Movie
-      </h3>
-
-      <p>
-        Free and legal movie, TV and streaming discovery resources.
-      </p>
-
-      <span class="access.html">
-        🔓 LOCKED
-      </span>
-
-    </a>
-
-
-    <!-- AI TOOLS - LOCKED -->
-    <div class="card locked">
-
-      <div class="icon">🔒</div>
-
-      <h3>
-        AI Tools
-      </h3>
-
-      <p>
-        AI websites and useful tools.
-      </p>
-
-      <span class="status">
-        🔒 LOCKED
-      </span>
-
-    </div>
-
-
-    <!-- CREATOR TOOLS - LOCKED -->
-    <div class="card locked">
-
-      <div class="icon">🔒</div>
-
-      <h3>
-        Creator Tools
-      </h3>
-
-      <p>
-        Tools for images, video, editing and content creation.
-      </p>
-
-      <span class="status">
-        🔒 LOCKED
-      </span>
-
-    </div>
-
-
-    <!-- OTHER TOOLS - LOCKED -->
-    <div class="card locked">
-
-      <div class="icon">🔒</div>
-
-      <h3>
-        Other Tools
-      </h3>
-
-      <p>
-        Useful websites and resources.
-      </p>
-
-      <span class="status">
-        🔒 LOCKED
-      </span>
-
-    </div>
-
-  </section>
-
-
-  <section class="section">
-
-    <h2>
-      How it works
-    </h2>
+    <h3>
+      TV & Movie
+    </h3>
 
     <p>
-      1️⃣ Tap <b>Get Access for ₹1</b>.<br>
-      2️⃣ Complete your payment.<br>
-      3️⃣ After verified payment, receive your access link.<br>
-      4️⃣ Open and bookmark the Resource Vault.
+      Free and legal movie, TV and streaming discovery resources.
     </p>
 
-  </section>
+    <span class="status">
+      🔓 ACCESS
+    </span>
+
+  </a>
 
 
-  <section class="section">
+  <!-- AI TOOLS - LOCKED -->
 
-    <h2>
-      What you'll get
-    </h2>
+  <div class="card locked">
+
+    <div class="icon">
+      🔒
+    </div>
+
+    <h3>
+      AI Tools
+    </h3>
 
     <p>
-      Regularly updated collections of useful resources.
-      Only resources that are legitimately free to access or that
-      you have permission to share should be included.
+      AI websites and useful tools.
     </p>
 
-  </section>
+    <span class="status">
+      🔒 LOCKED
+    </span>
+
+  </div>
 
 
-  <footer>
-    © 2026 ABQ Online.
-  </footer>
+  <!-- CREATOR TOOLS - LOCKED -->
+
+  <div class="card locked">
+
+    <div class="icon">
+      🔒
+    </div>
+
+    <h3>
+      Creator Tools
+    </h3>
+
+    <p>
+      Tools for images, video, editing and content creation.
+    </p>
+
+    <span class="status">
+      🔒 LOCKED
+    </span>
+
+  </div>
+
+
+  <!-- OTHER TOOLS - LOCKED -->
+
+  <div class="card locked">
+
+    <div class="icon">
+      🔒
+    </div>
+
+    <h3>
+      Other Tools
+    </h3>
+
+    <p>
+      Useful websites and resources.
+    </p>
+
+    <span class="status">
+      🔒 LOCKED
+    </span>
+
+  </div>
+
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="section">
+
+  <h2>
+    How it works
+  </h2>
+
+  <p>
+    1️⃣ Complete the ₹1 payment.<br>
+    2️⃣ Return to this page.<br>
+    3️⃣ Tap <b>I HAVE PAID — OPEN ACCESS</b>.<br>
+    4️⃣ Open and bookmark the Resource Vault.
+  </p>
+
+</section>
+
+
+<!-- WHAT YOU'LL GET -->
+
+<section class="section">
+
+  <h2>
+    What you'll get
+  </h2>
+
+  <p>
+    Regularly updated collections of useful resources.
+    Only resources that are legitimately free to access or that
+    you have permission to share should be included.
+  </p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footerlinks">
+
+    <a href="index.html">Home</a>
+
+    <a href="access.html">Resources</a>
+
+    <a href="about.html">About</a>
+
+    <a href="contact.html">Contact</a>
+
+    <a href="privacy.html">Privacy</a>
+
+    <a href="terms.html">Terms</a>
+
+  </div>
+
+  © 2026 ABQ Online.
+
+</footer>
+
 
 </div>
 
 </body>
+
 </html>
