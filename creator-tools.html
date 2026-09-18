@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Creator & Learning Tools — Resource Vault</title>
+
+<meta name="description" content="Explore educational platforms, documentary resources, learning websites, visual tools and useful resources for creators and learners.">
+<meta name="robots" content="index,follow">
+
+<style>
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at top,#24114d 0,#100b22 38%,#080812 100%);
+  color:#fff;
+  min-height:100vh;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(8,8,18,.88);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav{
+  max-width:1100px;
+  margin:auto;
+  padding:14px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.brand{
+  font-weight:900;
+  letter-spacing:.5px;
+  white-space:nowrap;
+}
+
+.brand span{
+  color:#b98cff;
+  font-size:12px;
+  margin-left:5px;
+}
+
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:12px;
+}
+
+nav a{
+  color:#c9c4d8;
+  font-size:13px;
+}
+
+nav a:hover{
+  color:#fff;
+}
+
+.container{
+  width:min(1050px,92%);
+  margin:auto;
+}
+
+.hero{
+  text-align:center;
+  padding:55px 10px 25px;
+}
+
+.hero h1{
+  margin:0;
+  font-size:clamp(31px,7vw,56px);
+  line-height:1.05;
+}
+
+.hero h1 span{
+  color:#b98cff;
+}
+
+.hero p{
+  max-width:730px;
+  margin:17px auto 0;
+  color:#aaa4ba;
+  line-height:1.7;
+}
+
+.back{
+  display:inline-block;
+  margin-top:20px;
+  padding:9px 15px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:10px;
+  color:#d8d0e8;
+  font-size:13px;
+}
+
+.search-box{
+  max-width:650px;
+  margin:20px auto 35px;
+}
+
+.search-box input{
+  width:100%;
+  padding:15px 18px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;
+  outline:none;
+  background:rgba(255,255,255,.07);
+  color:#fff;
+  font-size:15px;
+}
+
+.search-box input::placeholder{
+  color:#817b91;
+}
+
+.category-title{
+  margin:42px 0 15px;
+  font-size:21px;
+}
+
+.category-title span{
+  color:#a889ff;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.card{
+  display:flex;
+  flex-direction:column;
+  min-height:190px;
+  padding:20px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:17px;
+  background:rgba(255,255,255,.045);
+  transition:.2s ease;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(185,140,255,.55);
+  background:rgba(255,255,255,.075);
+}
+
+.icon{
+  font-size:27px;
+  margin-bottom:10px;
+}
+
+.card h3{
+  margin:0 0 8px;
+  font-size:17px;
+}
+
+.card p{
+  margin:0;
+  color:#9e98ac;
+  line-height:1.55;
+  font-size:13px;
+  flex:1;
+}
+
+.visit{
+  display:inline-block;
+  margin-top:16px;
+  padding:10px 13px;
+  text-align:center;
+  border-radius:10px;
+  background:#7c4dff;
+  font-weight:700;
+  font-size:13px;
+}
+
+.visit:hover{
+  background:#9068ff;
+}
+
+.info{
+  margin:45px 0;
+  padding:23px;
+  border-radius:17px;
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.04);
+}
+
+.info h2{
+  margin-top:0;
+}
+
+.info p{
+  color:#aaa4b5;
+  line-height:1.7;
+  font-size:14px;
+}
+
+footer{
+  margin-top:55px;
+  padding:28px 15px;
+  text-align:center;
+  color:#777184;
+  border-top:1px solid rgba(255,255,255,.08);
+  font-size:13px;
+}
+
+.no-results{
+  display:none;
+  text-align:center;
+  color:#9992a8;
+  padding:30px;
+}
+
+@media(max-width:800px){
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:560px){
+  .nav{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  nav{
+    justify-content:flex-start;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding-top:38px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <div class="brand">
+      ⚡ RESOURCE VAULT <span>₹0 ACCESS</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="access.html">Resources</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main class="container">
+
+<section class="hero">
+
+  <h1>🎨 <span>Creator & Learning</span></h1>
+
+  <p>
+    Discover educational platforms, documentaries, online courses,
+    visual learning tools, talks, research resources and useful
+    websites for creators and curious learners.
+  </p>
+
+  <a class="back" href="access.html">
+    ← Back to Categories
+  </a>
+
+</section>
+
+
+<div class="search-box">
+
+  <input
+    type="search"
+    id="search"
+    placeholder="🔎 Search resources..."
+    oninput="filterTools()"
+    aria-label="Search creator and learning resources"
+  >
+
+</div>
+
+
+<!-- DOCUMENTARIES -->
+
+<h2 class="category-title">
+  🎬 <span>Documentaries & Educational Video</span>
+</h2>
+
+<div class="grid">
+
+
+<div class="card" data-name="I Have No TV">
+  <div class="icon">📺</div>
+  <h3>I Have No TV</h3>
+  <p>Website featuring documentaries and educational video content.</p>
+  <a class="visit" href="https://ihavenotv.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Documentary Area">
+  <div class="icon">🎥</div>
+  <h3>Documentary Area</h3>
+  <p>Collection of documentary-related video resources.</p>
+  <a class="visit" href="https://www.documentaryarea.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="DocPlus">
+  <div class="icon">📽️</div>
+  <h3>DocPlus</h3>
+  <p>Explore documentary and educational video resources.</p>
+  <a class="visit" href="https://www.docplus.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Top Documentary Films">
+  <div class="icon">🎞️</div>
+  <h3>Top Documentary Films</h3>
+  <p>Directory focused on documentary films and topics.</p>
+  <a class="visit" href="https://topdocumentaryfilms.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Thought Maybe">
+  <div class="icon">💭</div>
+  <h3>Thought Maybe</h3>
+  <p>Curated educational and documentary-style media.</p>
+  <a class="visit" href="https://thoughtmaybe.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Media Burn">
+  <div class="icon">📼</div>
+  <h3>Media Burn</h3>
+  <p>Archive and media resources for exploring documentary history.</p>
+  <a class="visit" href="https://mediaburn.org" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="ARTE">
+  <div class="icon">🇪🇺</div>
+  <h3>ARTE</h3>
+  <p>European cultural and educational television platform.</p>
+  <a class="visit" href="https://www.arte.tv" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Documentary.net">
+  <div class="icon">🎬</div>
+  <h3>Documentary.net</h3>
+  <p>Online documentary resource and directory.</p>
+  <a class="visit" href="https://documentary.net" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Documentary Storm">
+  <div class="icon">🌩️</div>
+  <h3>Documentary Storm</h3>
+  <p>Documentary-focused video collection.</p>
+  <a class="visit" href="https://www.documentarystorm.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Rocumentaries">
+  <div class="icon">🎞️</div>
+  <h3>Rocumentaries</h3>
+  <p>Documentary-related online media resource.</p>
+  <a class="visit" href="https://rocumentaries.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="PBS Video">
+  <div class="icon">📺</div>
+  <h3>PBS Video</h3>
+  <p>Educational and public television video resources.</p>
+  <a class="visit" href="https://www.pbs.org/video" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="National Geographic TV">
+  <div class="icon">🌍</div>
+  <h3>National Geographic TV</h3>
+  <p>Science, nature, history and educational programming.</p>
+  <a class="visit" href="https://www.natgeotv.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Folkstreams">
+  <div class="icon">🎥</div>
+  <h3>Folkstreams</h3>
+  <p>Documentary films documenting American regional cultures.</p>
+  <a class="visit" href="https://www.folkstreams.net" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Films For Action">
+  <div class="icon">🌎</div>
+  <h3>Films For Action</h3>
+  <p>Collection of films and educational resources covering social topics.</p>
+  <a class="visit" href="https://www.filmsforaction.org" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="VideoNeat">
+  <div class="icon">▶️</div>
+  <h3>VideoNeat</h3>
+  <p>Online video resource for exploring interesting content.</p>
+  <a class="visit" href="https://www.videoneat.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Watch Documentaries">
+  <div class="icon">🎥</div>
+  <h3>Watch Documentaries</h3>
+  <p>Documentary discovery and viewing resource.</p>
+  <a class="visit" href="https://watchdocumentaries.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="MVGroup Forums">
+  <div class="icon">💬</div>
+  <h3>MVGroup Forums</h3>
+  <p>Community forum focused on documentary discussions and resources.</p>
+  <a class="visit" href="https://forums.mvgroup.org" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="NASA Plus">
+  <div class="icon">🚀</div>
+  <h3>NASA+</h3>
+  <p>NASA's streaming platform for space and science content.</p>
+  <a class="visit" href="https://plus.nasa.gov" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+</div>
+
+
+<!-- COURSES -->
+
+<h2 class="category-title">
+  🎓 <span>Online Courses & Education</span>
+</h2>
+
+<div class="grid">
+
+
+<div class="card" data-name="Limnology">
+  <div class="icon">🌊</div>
+  <h3>Limnology</h3>
+  <p>Explore resources related to freshwater science and learning.</p>
+  <a class="visit" href="https://limnology.co" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="edX">
+  <div class="icon">🎓</div>
+  <h3>edX</h3>
+  <p>Online courses and educational programs from universities and institutions.</p>
+  <a class="visit" href="https://www.edx.org" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="MIT OpenCourseWare">
+  <div class="icon">🏛️</div>
+  <h3>MIT OpenCourseWare</h3>
+  <p>Free educational materials from MIT courses.</p>
+  <a class="visit" href="https://ocw.mit.edu" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Khan Academy">
+  <div class="icon">📚</div>
+  <h3>Khan Academy</h3>
+  <p>Free educational lessons and practice across many subjects.</p>
+  <a class="visit" href="https://www.khanacademy.org" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Class Central">
+  <div class="icon">🎓</div>
+  <h3>Class Central</h3>
+  <p>Search and discover online courses from different providers.</p>
+  <a class="visit" href="https://www.classcentral.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Educational Hub">
+  <div class="icon">📖</div>
+  <h3>Educational Hub</h3>
+  <p>Educational resources and learning materials.</p>
+  <a class="visit" href="https://educationalhub.in" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="OpenLearn">
+  <div class="icon">📘</div>
+  <h3>OpenLearn</h3>
+  <p>Free learning resources from The Open University.</p>
+  <a class="visit" href="https://www.open.edu/openlearn" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Alison">
+  <div class="icon">🎓</div>
+  <h3>Alison</h3>
+  <p>Online learning platform offering courses across many subjects.</p>
+  <a class="visit" href="https://alison.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Saylor">
+  <div class="icon">📚</div>
+  <h3>Saylor</h3>
+  <p>Open online courses and learning materials.</p>
+  <a class="visit" href="https://learn.saylor.org" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Open Culture">
+  <div class="icon">🌐</div>
+  <h3>Open Culture</h3>
+  <p>Curated educational media, courses, books and cultural resources.</p>
+  <a class="visit" href="https://www.openculture.com/freeonlinecourses" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Google Courses">
+  <div class="icon">🔵</div>
+  <h3>Google Courses & Tools</h3>
+  <p>Learning resources and courses from Google.</p>
+  <a class="visit" href="https://grow.google/intl/uk/courses-and-tools" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="openHPI">
+  <div class="icon">💻</div>
+  <h3>openHPI</h3>
+  <p>Online courses and computer science education.</p>
+  <a class="visit" href="https://open.hpi.de" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Carnegie Mellon OLI">
+  <div class="icon">🏫</div>
+  <h3>CMU Open Learning Initiative</h3>
+  <p>Open and independent learning courses from Carnegie Mellon University.</p>
+  <a class="visit" href="https://oli.cmu.edu/independent-learner-courses" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="VideoLectures">
+  <div class="icon">🎥</div>
+  <h3>VideoLectures</h3>
+  <p>Video lectures covering science, technology and academic subjects.</p>
+  <a class="visit" href="https://videolectures.net" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Open Yale Courses">
+  <div class="icon">🏛️</div>
+  <h3>Open Yale Courses</h3>
+  <p>Free lectures and course materials from Yale University.</p>
+  <a class="visit" href="https://oyc.yale.edu/courses" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Gresham College">
+  <div class="icon">🎓</div>
+  <h3>Gresham College</h3>
+  <p>Public lectures covering science, arts, history and other subjects.</p>
+  <a class="visit" href="https://www.gresham.ac.uk" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Crash Course">
+  <div class="icon">⚡</div>
+  <h3>Crash Course</h3>
+  <p>Educational video courses covering a wide range of subjects.</p>
+  <a class="visit" href="https://thecrashcourse.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+</div>
+
+
+<!-- LEARNING & KNOWLEDGE -->
+
+<h2 class="category-title">
+  🧠 <span>Learning & Knowledge</span>
+</h2>
+
+<div class="grid">
+
+
+<div class="card" data-name="Learn Anything">
+  <div class="icon">🧠</div>
+  <h3>Learn Anything</h3>
+  <p>Visual knowledge maps and resources for exploring subjects.</p>
+  <a class="visit" href="https://learn-anything.xyz" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Wakelet">
+  <div class="icon">📌</div>
+  <h3>Wakelet</h3>
+  <p>Platform for collecting, organizing and sharing useful resources.</p>
+  <a class="visit" href="https://wakelet.com/explore" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Open Culture">
+  <div class="icon">🌍</div>
+  <h3>Open Culture</h3>
+  <p>Collection of free cultural and educational resources.</p>
+  <a class="visit" href="https://www.openculture.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Borr Dev">
+  <div class="icon">💻</div>
+  <h3>Borr.dev</h3>
+  <p>Developer and technology-related learning resources.</p>
+  <a class="visit" href="https://borr.dev" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Free Learning List">
+  <div class="icon">📚</div>
+  <h3>Free Learning List</h3>
+  <p>Collection of learning resources and educational links.</p>
+  <a class="visit" href="https://freelearninglist.org" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Educational Games GitHub">
+  <div class="icon">🎮</div>
+  <h3>Awesome Educational Games</h3>
+  <p>Open-source collection of educational games and projects.</p>
+  <a class="visit" href="https://github.com/yrgo/awesome-educational-games" target="_blank" rel="noopener noreferrer">
+    Open Repository ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="PhET">
+  <div class="icon">🧪</div>
+  <h3>PhET Interactive Simulations</h3>
+  <p>Interactive science and mathematics simulations.</p>
+  <a class="visit" href="https://phet.colorado.edu" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Project Lumen">
+  <div class="icon">💡</div>
+  <h3>Project Lumen</h3>
+  <p>Interactive learning and educational resources.</p>
+  <a class="visit" href="https://www.projectlumen.app" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Cognito">
+  <div class="icon">🧠</div>
+  <h3>Cognito</h3>
+  <p>Interactive educational resources and learning materials.</p>
+  <a class="visit" href="https://www.cognitoedu.org" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Academo">
+  <div class="icon">📐</div>
+  <h3>Academo</h3>
+  <p>Interactive educational demonstrations and visual tools.</p>
+  <a class="visit" href="https://academo.org" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Punctuation Guide">
+  <div class="icon">✍️</div>
+  <h3>Punctuation Guide</h3>
+  <p>Reference guide for punctuation and writing.</p>
+  <a class="visit" href="https://www.thepunctuationguide.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Basic Knowledge 101">
+  <div class="icon">📖</div>
+  <h3>Basic Knowledge 101</h3>
+  <p>Reference and educational information across many topics.</p>
+  <a class="visit" href="https://www.basicknowledge101.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="media.ccc.de">
+  <div class="icon">🎤</div>
+  <h3>media.ccc.de</h3>
+  <p>Video archive featuring technology and security talks.</p>
+  <a class="visit" href="https://media.ccc.de" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="TED">
+  <div class="icon">🎙️</div>
+  <h3>TED</h3>
+  <p>Talks and ideas covering technology, science, culture and more.</p>
+  <a class="visit" href="https://www.ted.com" target="_blank" rel="noopener noreferrer">
+    Visit Website ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Stack Exchange">
+  <div class="icon">💬</div>
+  <h3>Stack Exchange</h3>
+  <p>Network of community-driven question and answer sites.</p>
+  <a class="visit" href="https://stackexchange.com" target="_blank" rel="noopener noreferre
