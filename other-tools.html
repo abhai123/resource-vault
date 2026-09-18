@@ -1,0 +1,942 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Other Tools — Resource Vault</title>
+
+<meta name="description" content="Explore useful ad blockers, filter lists, DNS services, privacy tools and security resources.">
+<meta name="robots" content="index,follow">
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at top,#24114d 0,#100b22 38%,#080812 100%);
+  color:#fff;
+  min-height:100vh;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(8,8,18,.88);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav{
+  max-width:1100px;
+  margin:auto;
+  padding:14px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.brand{
+  font-weight:900;
+  letter-spacing:.5px;
+  white-space:nowrap;
+}
+
+.brand span{
+  color:#b98cff;
+  font-size:12px;
+  margin-left:5px;
+}
+
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:12px;
+}
+
+nav a{
+  color:#c9c4d8;
+  font-size:13px;
+}
+
+nav a:hover{
+  color:#fff;
+}
+
+.container{
+  width:min(1050px,92%);
+  margin:auto;
+}
+
+.hero{
+  text-align:center;
+  padding:55px 10px 25px;
+}
+
+.hero h1{
+  margin:0;
+  font-size:clamp(32px,7vw,58px);
+  line-height:1.05;
+}
+
+.hero h1 span{
+  color:#b98cff;
+}
+
+.hero p{
+  max-width:720px;
+  margin:17px auto 0;
+  color:#aaa4ba;
+  line-height:1.7;
+}
+
+.back{
+  display:inline-block;
+  margin-top:20px;
+  padding:9px 15px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:10px;
+  color:#d8d0e8;
+  font-size:13px;
+}
+
+.search-box{
+  max-width:650px;
+  margin:20px auto 35px;
+}
+
+.search-box input{
+  width:100%;
+  padding:15px 18px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;
+  outline:none;
+  background:rgba(255,255,255,.07);
+  color:#fff;
+  font-size:15px;
+}
+
+.search-box input::placeholder{
+  color:#817b91;
+}
+
+.category-title{
+  margin:42px 0 15px;
+  font-size:21px;
+}
+
+.category-title span{
+  color:#a889ff;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.card{
+  display:flex;
+  flex-direction:column;
+  min-height:190px;
+  padding:20px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:17px;
+  background:rgba(255,255,255,.045);
+  transition:.2s ease;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(185,140,255,.55);
+  background:rgba(255,255,255,.075);
+}
+
+.icon{
+  font-size:27px;
+  margin-bottom:10px;
+}
+
+.card h3{
+  margin:0 0 8px;
+  font-size:17px;
+}
+
+.card p{
+  margin:0;
+  color:#9e98ac;
+  line-height:1.55;
+  font-size:13px;
+  flex:1;
+}
+
+.visit{
+  display:inline-block;
+  margin-top:16px;
+  padding:10px 13px;
+  text-align:center;
+  border-radius:10px;
+  background:#7c4dff;
+  font-weight:700;
+  font-size:13px;
+}
+
+.visit:hover{
+  background:#9068ff;
+}
+
+.info{
+  margin:45px 0;
+  padding:23px;
+  border-radius:17px;
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.04);
+}
+
+.info h2{
+  margin-top:0;
+}
+
+.info p{
+  color:#aaa4b5;
+  line-height:1.7;
+  font-size:14px;
+}
+
+footer{
+  margin-top:55px;
+  padding:28px 15px;
+  text-align:center;
+  color:#777184;
+  border-top:1px solid rgba(255,255,255,.08);
+  font-size:13px;
+}
+
+.no-results{
+  display:none;
+  text-align:center;
+  color:#9992a8;
+  padding:30px;
+}
+
+@media(max-width:800px){
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:560px){
+
+  .nav{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  nav{
+    justify-content:flex-start;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding-top:38px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="nav">
+
+    <div class="brand">
+      ⚡ RESOURCE VAULT <span>₹0 ACCESS</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="access.html">Resources</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main class="container">
+
+
+<section class="hero">
+
+  <h1>
+    🛠️ <span>Other Tools</span>
+  </h1>
+
+  <p>
+    Explore useful ad blockers, browser extensions, filter lists,
+    DNS services, privacy tools and network security resources.
+  </p>
+
+  <a class="back" href="access.html">
+    ← Back to Categories
+  </a>
+
+</section>
+
+
+<div class="search-box">
+
+  <input
+    type="search"
+    id="search"
+    placeholder="🔎 Search tools..."
+    oninput="filterTools()"
+    aria-label="Search other tools"
+  >
+
+</div>
+
+
+<!-- AD BLOCKERS -->
+
+<h2 class="category-title">
+  🛡️ <span>Ad Blockers & Browser Tools</span>
+</h2>
+
+<div class="grid">
+
+
+<div class="card" data-name="uBlock Origin">
+  <div class="icon">🛡️</div>
+  <h3>uBlock Origin</h3>
+  <p>Open-source content blocker designed for efficient browser filtering.</p>
+  <a class="visit"
+     href="https://ublockorigin.com"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="AdGuard">
+  <div class="icon">🛡️</div>
+  <h3>AdGuard</h3>
+  <p>Privacy and content-blocking software for different platforms.</p>
+  <a class="visit"
+     href="https://adguard.com"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="uBlock Origin GitHub">
+  <div class="icon">💻</div>
+  <h3>uBlock Origin — GitHub</h3>
+  <p>Source repository and development resources for uBlock Origin.</p>
+  <a class="visit"
+     href="https://github.com/gorhill/uBlock"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Repository ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="SponsorBlock">
+  <div class="icon">⏭️</div>
+  <h3>SponsorBlock</h3>
+  <p>Community-powered browser extension for skipping sponsored segments.</p>
+  <a class="visit"
+     href="https://sponsor.ajay.app"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Disblock">
+  <div class="icon">🚫</div>
+  <h3>Disblock</h3>
+  <p>Open-source blocking project hosted on Codeberg.</p>
+  <a class="visit"
+     href="https://codeberg.org/Disblock/Disblock"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Project ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Discord Adblock">
+  <div class="icon">💬</div>
+  <h3>Discord Adblock</h3>
+  <p>Community project related to content filtering for Discord.</p>
+  <a class="visit"
+     href="https://codeberg.org/Discord-Adblock/Discord-Adblock"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Project ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="PopupOff">
+  <div class="icon">🚫</div>
+  <h3>PopupOff</h3>
+  <p>Browser tool focused on reducing unwanted popups and overlays.</p>
+  <a class="visit"
+     href="https://popupoff.org"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Mozilla Addons">
+  <div class="icon">🦊</div>
+  <h3>Mozilla Add-ons</h3>
+  <p>Official directory for Firefox extensions and themes.</p>
+  <a class="visit"
+     href="https://addons.mozilla.org"
+     target="_blank"
+     rel="noopener noreferrer">
+     Browse Add-ons ↗
+  </a>
+</div>
+
+
+</div>
+
+
+<!-- FILTER LISTS -->
+
+<h2 class="category-title">
+  📋 <span>Filter Lists & Blocklists</span>
+</h2>
+
+<div class="grid">
+
+
+<div class="card" data-name="FilterLists">
+  <div class="icon">📋</div>
+  <h3>FilterLists</h3>
+  <p>Directory for discovering different filtering lists.</p>
+  <a class="visit"
+     href="https://filterlists.com"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Hosts Extras">
+  <div class="icon">📄</div>
+  <h3>Hosts Extras</h3>
+  <p>Collection of hosts-related filtering resources on GitHub.</p>
+  <a class="visit"
+     href="https://github.com/FadeMind/hosts.extras"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Repository ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="HaGeZi DNS Blocklists">
+  <div class="icon">🚧</div>
+  <h3>HaGeZi DNS Blocklists</h3>
+  <p>Collection of DNS blocklists maintained on GitHub.</p>
+  <a class="visit"
+     href="https://github.com/hagezi/dns-blocklists"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Repository ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="HBlock">
+  <div class="icon">🧱</div>
+  <h3>HBlock</h3>
+  <p>Hosts-file based blocking project.</p>
+  <a class="visit"
+     href="https://hblock.molinero.dev"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="FMHY Filterlist">
+  <div class="icon">📑</div>
+  <h3>FMHY Filterlist</h3>
+  <p>Filter list project hosted on GitHub.</p>
+  <a class="visit"
+     href="https://github.com/fmhy/FMHYFilterlist"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Repository ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Nova Filters">
+  <div class="icon">✨</div>
+  <h3>Nova Filters</h3>
+  <p>Open filtering project hosted on GitHub.</p>
+  <a class="visit"
+     href="https://github.com/ignaciocastro/novafilters"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Repository ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Laylavish uBlock Origin">
+  <div class="icon">🛡️</div>
+  <h3>Laylavish uBlockOrigin</h3>
+  <p>Additional uBlock Origin filtering resources.</p>
+  <a class="visit"
+     href="https://github.com/laylavish/uBlockOrigin"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Repository ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Huge AI Blocklist">
+  <div class="icon">🤖</div>
+  <h3>Huge AI Blocklist</h3>
+  <p>AI-related filtering list project hosted on GitHub.</p>
+  <a class="visit"
+     href="https://github.com/laylavish/huge-ai-blocklist"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Repository ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="OISD">
+  <div class="icon">🛡️</div>
+  <h3>OISD</h3>
+  <p>Community-maintained blocklist resources.</p>
+  <a class="visit"
+     href="https://oisd.nl"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Site ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Spamhaus">
+  <div class="icon">🚨</div>
+  <h3>Spamhaus</h3>
+  <p>Security organization providing reputation and threat intelligence resources.</p>
+  <a class="visit"
+     href="https://www.spamhaus.org"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Site ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="1Hosts">
+  <div class="icon">1️⃣</div>
+  <h3>1Hosts</h3>
+  <p>Hosts-based blocking list project.</p>
+  <a class="visit"
+     href="https://badmojr.github.io/1Hosts"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Project ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="O0 Pages">
+  <div class="icon">🌐</div>
+  <h3>O0 Pages</h3>
+  <p>Web-hosted filtering and privacy resources.</p>
+  <a class="visit"
+     href="https://o0.pages.dev"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Site ↗
+  </a>
+</div>
+
+
+</div>
+
+
+<!-- DNS -->
+
+<h2 class="category-title">
+  🌐 <span>DNS & Network Tools</span>
+</h2>
+
+<div class="grid">
+
+
+<div class="card" data-name="AdGuard DNS">
+  <div class="icon">🌐</div>
+  <h3>AdGuard DNS</h3>
+  <p>DNS service with filtering and privacy-focused features.</p>
+  <a class="visit"
+     href="https://adguard-dns.io"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Pi-hole">
+  <div class="icon">🕳️</div>
+  <h3>Pi-hole</h3>
+  <p>Network-level blocking software designed for self-hosted use.</p>
+  <a class="visit"
+     href="https://pi-hole.net"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="AdGuard Home">
+  <div class="icon">🏠</div>
+  <h3>AdGuard Home</h3>
+  <p>Network-wide DNS filtering software from AdGuard.</p>
+  <a class="visit"
+     href="https://adguard.com/en/adguard-home/overview.html"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="DNS Speed Test">
+  <div class="icon">⚡</div>
+  <h3>DNS Speed Test</h3>
+  <p>Tool for testing DNS resolver performance.</p>
+  <a class="visit"
+     href="https://dnsspeedtest.online"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="DNSPerf">
+  <div class="icon">📊</div>
+  <h3>DNSPerf</h3>
+  <p>DNS performance measurement and comparison resources.</p>
+  <a class="visit"
+     href="https://dnsperf.com"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="YogaDNS">
+  <div class="icon">🧘</div>
+  <h3>YogaDNS</h3>
+  <p>DNS management and privacy-focused networking software.</p>
+  <a class="visit"
+     href="https://yogadns.com"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="NextDNS">
+  <div class="icon">🔐</div>
+  <h3>NextDNS</h3>
+  <p>Configurable DNS service with security and filtering features.</p>
+  <a class="visit"
+     href="https://nextdns.io"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="LibreDNS">
+  <div class="icon">🟢</div>
+  <h3>LibreDNS</h3>
+  <p>Public DNS resolver service focused on privacy.</p>
+  <a class="visit"
+     href="https://libredns.gr"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Tiar DNS">
+  <div class="icon">🔒</div>
+  <h3>Tiar DNS</h3>
+  <p>DNS-over-HTTPS service and privacy-oriented resolver.</p>
+  <a class="visit"
+     href="https://doh.tiar.app"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="RethinkDNS">
+  <div class="icon">🧠</div>
+  <h3>RethinkDNS</h3>
+  <p>DNS and network filtering tools for privacy and control.</p>
+  <a class="visit"
+     href="https://rethinkdns.com"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="DNSwarden">
+  <div class="icon">🛡️</div>
+  <h3>DNSwarden</h3>
+  <p>Privacy-oriented DNS and encrypted DNS services.</p>
+  <a class="visit"
+     href="https://dnswarden.com"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Blocky">
+  <div class="icon">🧱</div>
+  <h3>Blocky</h3>
+  <p>Fast and configurable DNS proxy with blocking features.</p>
+  <a class="visit"
+     href="https://0xerr0r.github.io/blocky"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Project ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Control D">
+  <div class="icon">🎛️</div>
+  <h3>Control D</h3>
+  <p>Configurable DNS service with filtering and routing options.</p>
+  <a class="visit"
+     href="https://controld.com"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="NxFilter">
+  <div class="icon">🔎</div>
+  <h3>NxFilter</h3>
+  <p>DNS-based filtering and network management software.</p>
+  <a class="visit"
+     href="https://nxfilter.org"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="TBlock">
+  <div class="icon">🚫</div>
+  <h3>TBlock</h3>
+  <p>DNS and content-blocking related resource.</p>
+  <a class="visit"
+     href="https://tblock.me"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Diversion">
+  <div class="icon">🌐</div>
+  <h3>Diversion</h3>
+  <p>Network-level domain filtering and blocking project.</p>
+  <a class="visit"
+     href="https://diversion.ch"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Tool ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Phishing Army">
+  <div class="icon">🎣</div>
+  <h3>Phishing Army</h3>
+  <p>Phishing-related threat intelligence and blocklist resources.</p>
+  <a class="visit"
+     href="https://phishing.army"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Site ↗
+  </a>
+</div>
+
+
+<div class="card" data-name="Technitium">
+  <div class="icon">🖥️</div>
+  <h3>Technitium</h3>
+  <p>Networking and DNS server software and resources.</p>
+  <a class="visit"
+     href="https://technitium.com"
+     target="_blank"
+     rel="noopener noreferrer">
+     Open Site ↗
+  </a>
+</div>
+
+
+</div>
+
+
+<!-- INFORMATION -->
+
+<section class="info">
+
+  <h2>🛠️ About These Tools</h2>
+
+  <p>
+    Resource Vault collects useful third-party resources covering
+    content blocking, browser extensions, filter lists, DNS services,
+    privacy tools and network security.
+  </p>
+
+  <p>
+    Each button opens the respective third-party website or project.
+    Availability, features, pricing, compatibility and policies are
+    controlled by the individual providers and may change over time.
+  </p>
+
+  <p>
+    Resource Vault is an independent directory and is not affiliated
+    with or endorsed by the services listed on this page.
+  </p>
+
+</section>
+
+
+<div class="no-results" id="noResults">
+  No matching tools found.
+</div>
+
+
+</main>
+
+
+<footer>
+  © 2026 ABQ Online.
+</footer>
+
+
+<script>
+
+function filterTools(){
+
+  const query =
+    document
+      .getElementById("search")
+      .value
+      .toLowerCase()
+      .trim();
+
+  const cards =
+    document.querySelectorAll(".card");
+
+  let visible = 0;
+
+  cards.forEach(card => {
+
+    const name =
+      card.dataset.name.toLowerCase();
+
+    const text =
+      card.innerText.toLowerCase();
+
+    const match =
+      !query ||
+      name.includes(query) ||
+      text.includes(query);
+
+    card.style.display =
+      match ? "flex" : "none";
+
+    if(match){
+      visible++;
+    }
+
+  });
+
+  document.getElementById("noResults").style.display =
+    visible === 0 ? "block" : "none";
+
+}
+
+</script>
+
+</body>
+</html>
