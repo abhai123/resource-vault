@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Tools — Resource Vault</title>
+<meta name="description" content="Explore useful AI tools for chat, research, writing, coding, local AI, search and more.">
+<meta name="robots" content="index,follow">
+
+<style>
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at top,#24114d 0,#100b22 38%,#080812 100%);
+  color:#fff;
+  min-height:100vh;
+}
+
+a{text-decoration:none;color:inherit}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(8,8,18,.88);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav{
+  max-width:1100px;
+  margin:auto;
+  padding:14px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.brand{
+  font-weight:900;
+  letter-spacing:.5px;
+  white-space:nowrap;
+}
+
+.brand span{
+  color:#b98cff;
+  font-size:12px;
+  margin-left:5px;
+}
+
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:12px;
+}
+
+nav a{
+  color:#c9c4d8;
+  font-size:13px;
+}
+
+nav a:hover{color:#fff}
+
+.container{
+  width:min(1050px,92%);
+  margin:auto;
+}
+
+.hero{
+  text-align:center;
+  padding:55px 10px 28px;
+}
+
+.hero h1{
+  margin:0;
+  font-size:clamp(32px,7vw,58px);
+  line-height:1.05;
+}
+
+.hero h1 span{color:#b98cff}
+
+.hero p{
+  max-width:700px;
+  margin:17px auto 0;
+  color:#aaa4ba;
+  line-height:1.7;
+}
+
+.back{
+  display:inline-block;
+  margin-top:20px;
+  padding:9px 15px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:10px;
+  color:#d8d0e8;
+  font-size:13px;
+}
+
+.search-box{
+  max-width:650px;
+  margin:20px auto 35px;
+}
+
+.search-box input{
+  width:100%;
+  padding:15px 18px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;
+  outline:none;
+  background:rgba(255,255,255,.07);
+  color:#fff;
+  font-size:15px;
+}
+
+.search-box input::placeholder{color:#817b91}
+
+.category-title{
+  margin:42px 0 15px;
+  font-size:21px;
+}
+
+.category-title span{
+  color:#a889ff;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.card{
+  display:flex;
+  flex-direction:column;
+  min-height:190px;
+  padding:20px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:17px;
+  background:rgba(255,255,255,.045);
+  transition:.2s ease;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(185,140,255,.55);
+  background:rgba(255,255,255,.075);
+}
+
+.icon{
+  font-size:27px;
+  margin-bottom:10px;
+}
+
+.card h3{
+  margin:0 0 8px;
+  font-size:17px;
+}
+
+.card p{
+  margin:0;
+  color:#9e98ac;
+  line-height:1.55;
+  font-size:13px;
+  flex:1;
+}
+
+.visit{
+  display:inline-block;
+  margin-top:16px;
+  padding:10px 13px;
+  text-align:center;
+  border-radius:10px;
+  background:#7c4dff;
+  font-weight:700;
+  font-size:13px;
+}
+
+.visit:hover{background:#9068ff}
+
+.info{
+  margin:45px 0;
+  padding:23px;
+  border-radius:17px;
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.04);
+}
+
+.info h2{margin-top:0}
+
+.info p{
+  color:#aaa4b5;
+  line-height:1.7;
+  font-size:14px;
+}
+
+footer{
+  margin-top:55px;
+  padding:28px 15px;
+  text-align:center;
+  color:#777184;
+  border-top:1px solid rgba(255,255,255,.08);
+  font-size:13px;
+}
+
+@media(max-width:800px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:560px){
+  .nav{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  nav{justify-content:flex-start}
+
+  .grid{grid-template-columns:1fr}
+
+  .hero{padding-top:38px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      ⚡ RESOURCE VAULT <span>₹0 ACCESS</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="access.html">Resources</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+<section class="hero">
+  <h1>🤖 <span>AI Tools</span></h1>
+  <p>
+    Explore AI assistants, research tools, writing tools, search engines,
+    local AI platforms and developer-focused AI services.
+  </p>
+
+  <a class="back" href="access.html">← Back to Categories</a>
+</section>
+
+<div class="search-box">
+  <input
+    type="search"
+    id="search"
+    placeholder="🔎 Search AI tools..."
+    oninput="filterTools()"
+    aria-label="Search AI tools"
+  >
+</div>
+
+
+<!-- AI CHAT & ASSISTANTS -->
+<h2 class="category-title">💬 <span>AI Chat & Assistants</span></h2>
+
+<div class="grid">
+
+<div class="card" data-name="Qwen">
+  <div class="icon">🧠</div>
+  <h3>Qwen</h3>
+  <p>AI assistant for conversations, reasoning, coding and general tasks.</p>
+  <a class="visit" href="https://chat.qwen.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="DeepSeek">
+  <div class="icon">🔍</div>
+  <h3>DeepSeek</h3>
+  <p>AI assistant with chat, reasoning and coding capabilities.</p>
+  <a class="visit" href="https://chat.deepseek.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Z AI">
+  <div class="icon">⚡</div>
+  <h3>Z AI</h3>
+  <p>AI-powered conversational tools and intelligent assistants.</p>
+  <a class="visit" href="https://chat.z.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Google AI Studio">
+  <div class="icon">✨</div>
+  <h3>Google AI Studio</h3>
+  <p>Build and experiment with Google's generative AI models.</p>
+  <a class="visit" href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Gemini">
+  <div class="icon">♊</div>
+  <h3>Gemini</h3>
+  <p>Google's AI assistant for writing, reasoning, research and more.</p>
+  <a class="visit" href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Meta AI">
+  <div class="icon">🦙</div>
+  <h3>Meta AI</h3>
+  <p>Meta's AI assistant for conversations, questions and creative tasks.</p>
+  <a class="visit" href="https://www.meta.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Kimi">
+  <div class="icon">🌙</div>
+  <h3>Kimi</h3>
+  <p>AI assistant designed for conversations, analysis and long-context tasks.</p>
+  <a class="visit" href="https://www.kimi.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="ChatGPT">
+  <div class="icon">🤖</div>
+  <h3>ChatGPT</h3>
+  <p>AI assistant for writing, coding, brainstorming, learning and analysis.</p>
+  <a class="visit" href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="LongCat">
+  <div class="icon">🐱</div>
+  <h3>LongCat</h3>
+  <p>Explore an AI assistant and model platform.</p>
+  <a class="visit" href="https://longcat.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Tencent AI Studio">
+  <div class="icon">🧪</div>
+  <h3>Tencent AI Studio</h3>
+  <p>AI development and experimentation platform from Tencent.</p>
+  <a class="visit" href="https://aistudio.tencent.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Xiaomi MiMo AI Studio">
+  <div class="icon">📱</div>
+  <h3>Xiaomi MiMo AI Studio</h3>
+  <p>AI model and experimentation platform from Xiaomi.</p>
+  <a class="visit" href="https://aistudio.xiaomimimo.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Grok">
+  <div class="icon">🚀</div>
+  <h3>Grok</h3>
+  <p>AI assistant for conversations, information and creative tasks.</p>
+  <a class="visit" href="https://grok.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Microsoft Copilot">
+  <div class="icon">🪟</div>
+  <h3>Microsoft Copilot</h3>
+  <p>Microsoft's AI assistant for productivity, search and creative work.</p>
+  <a class="visit" href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Claude">
+  <div class="icon">🟠</div>
+  <h3>Claude</h3>
+  <p>AI assistant from Anthropic for writing, analysis, coding and research.</p>
+  <a class="visit" href="https://claude.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Mistral Chat">
+  <div class="icon">🌬️</div>
+  <h3>Mistral Chat</h3>
+  <p>Conversational AI powered by Mistral models.</p>
+  <a class="visit" href="https://chat.mistral.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Upstage Solar Chat">
+  <div class="icon">☀️</div>
+  <h3>Solar Chat</h3>
+  <p>Chat interface powered by Upstage's Solar AI models.</p>
+  <a class="visit" href="https://solar-chat.upstage.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Poolside">
+  <div class="icon">💻</div>
+  <h3>Poolside</h3>
+  <p>AI tools focused on software development and coding.</p>
+  <a class="visit" href="https://chat.poolside.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Together AI">
+  <div class="icon">🤝</div>
+  <h3>Together AI</h3>
+  <p>Platform for accessing and building with generative AI models.</p>
+  <a class="visit" href="https://chat.together.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Lumo Proton">
+  <div class="icon">🔐</div>
+  <h3>Lumo</h3>
+  <p>Privacy-focused AI assistant from Proton.</p>
+  <a class="visit" href="https://lumo.proton.me" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Public AI">
+  <div class="icon">🌐</div>
+  <h3>Public AI</h3>
+  <p>Explore AI services and open AI projects.</p>
+  <a class="visit" href="https://publicai.co" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Public AI Chat">
+  <div class="icon">💬</div>
+  <h3>Public AI Chat</h3>
+  <p>Chat interface for exploring Public AI services.</p>
+  <a class="visit" href="https://chat.publicai.co" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+</div>
+
+
+<!-- AI SEARCH & RESEARCH -->
+<h2 class="category-title">🔎 <span>AI Search & Research</span></h2>
+
+<div class="grid">
+
+<div class="card" data-name="Perplexity">
+  <div class="icon">🔎</div>
+  <h3>Perplexity</h3>
+  <p>AI-powered search and research assistant.</p>
+  <a class="visit" href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="NotebookLM">
+  <div class="icon">📓</div>
+  <h3>NotebookLM</h3>
+  <p>Research and study assistant for working with your sources.</p>
+  <a class="visit" href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Brave Search">
+  <div class="icon">🦁</div>
+  <h3>Brave Search</h3>
+  <p>Privacy-focused search engine with AI-powered features.</p>
+  <a class="visit" href="https://search.brave.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Exa">
+  <div class="icon">🔬</div>
+  <h3>Exa</h3>
+  <p>AI-powered search and web discovery platform.</p>
+  <a class="visit" href="https://exa.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="SciSpace">
+  <div class="icon">📚</div>
+  <h3>SciSpace</h3>
+  <p>Tools for understanding and exploring scientific research papers.</p>
+  <a class="visit" href="https://scispace.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Elicit">
+  <div class="icon">📖</div>
+  <h3>Elicit</h3>
+  <p>AI research assistant for finding and analyzing academic literature.</p>
+  <a class="visit" href="https://elicit.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="AlphaXiv">
+  <div class="icon">🧬</div>
+  <h3>AlphaXiv</h3>
+  <p>Explore and understand research papers with AI-powered tools.</p>
+  <a class="visit" href="https://www.alphaxiv.org" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Scinito">
+  <div class="icon">🧪</div>
+  <h3>Scinito</h3>
+  <p>AI tools for exploring scientific information and research.</p>
+  <a class="visit" href="https://ekb.scinito.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Sakana AI">
+  <div class="icon">🐟</div>
+  <h3>Sakana AI</h3>
+  <p>Explore AI research and projects from Sakana AI.</p>
+  <a class="visit" href="https://chat.sakana.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="TextFX">
+  <div class="icon">✍️</div>
+  <h3>TextFX</h3>
+  <p>Experimental AI-powered creative writing and language tools.</p>
+  <a class="visit" href="https://textfx.withgoogle.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+</div>
+
+
+<!-- WRITING -->
+<h2 class="category-title">✍️ <span>AI Writing</span></h2>
+
+<div class="grid">
+
+<div class="card" data-name="NeverWrite">
+  <div class="icon">📝</div>
+  <h3>NeverWrite</h3>
+  <p>AI-powered writing and content assistance.</p>
+  <a class="visit" href="https://neverwrite.app" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="ToolBaz">
+  <div class="icon">🛠️</div>
+  <h3>ToolBaz</h3>
+  <p>Collection of AI-powered tools for writing and productivity.</p>
+  <a class="visit" href="https://toolbaz.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="ToolBaz App">
+  <div class="icon">⚡</div>
+  <h3>ToolBaz App</h3>
+  <p>Web app providing access to ToolBaz AI utilities.</p>
+  <a class="visit" href="https://app.toolbaz.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Rytr">
+  <div class="icon">✒️</div>
+  <h3>Rytr</h3>
+  <p>AI writing assistant for creating and improving content.</p>
+  <a class="visit" href="https://rytr.me" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+</div>
+
+
+<!-- AI DEVELOPER -->
+<h2 class="category-title">💻 <span>AI Developer Tools</span></h2>
+
+<div class="grid">
+
+<div class="card" data-name="NVIDIA Build">
+  <div class="icon">🟢</div>
+  <h3>NVIDIA Build</h3>
+  <p>Platform for building applications with NVIDIA AI technologies.</p>
+  <a class="visit" href="https://build.nvidia.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Mistral Console">
+  <div class="icon">⚙️</div>
+  <h3>Mistral Console</h3>
+  <p>Developer platform for working with Mistral AI models.</p>
+  <a class="visit" href="https://console.mistral.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Allen AI Playground">
+  <div class="icon">🧠</div>
+  <h3>AllenAI Playground</h3>
+  <p>Experiment with AI research models and technologies.</p>
+  <a class="visit" href="https://playground.allenai.org" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Trying Open">
+  <div class="icon">🔓</div>
+  <h3>TryingOpen</h3>
+  <p>Explore open AI models and related projects.</p>
+  <a class="visit" href="https://www.tryingopen.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="OpenWebUI">
+  <div class="icon">🖥️</div>
+  <h3>Open WebUI</h3>
+  <p>Open-source interface for interacting with AI models.</p>
+  <a class="visit" href="https://openwebui.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Jan AI">
+  <div class="icon">🖥️</div>
+  <h3>Jan</h3>
+  <p>Open-source AI assistant designed to run AI models locally.</p>
+  <a class="visit" href="https://jan.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="LM Studio">
+  <div class="icon">💾</div>
+  <h3>LM Studio</h3>
+  <p>Desktop application for running and experimenting with local AI models.</p>
+  <a class="visit" href="https://lmstudio.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Unsloth">
+  <div class="icon">🦥</div>
+  <h3>Unsloth</h3>
+  <p>Tools and resources for training and fine-tuning AI models.</p>
+  <a class="visit" href="https://unsloth.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="AnythingLLM">
+  <div class="icon">📄</div>
+  <h3>AnythingLLM</h3>
+  <p>AI workspace for working with documents and language models.</p>
+  <a class="visit" href="https://anythingllm.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="LobeChat">
+  <div class="icon">💬</div>
+  <h3>LobeChat</h3>
+  <p>AI chat interface and open-source AI workspace.</p>
+  <a class="visit" href="https://lobechat.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="LibreChat">
+  <div class="icon">🗨️</div>
+  <h3>LibreChat</h3>
+  <p>Open-source interface supporting multiple AI providers and models.</p>
+  <a class="visit" href="https://librechat.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Lollms">
+  <div class="icon">🤖</div>
+  <h3>LoLLMS</h3>
+  <p>Local and open AI tools for working with language models.</p>
+  <a class="visit" href="https://lollms.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Chatbox AI">
+  <div class="icon">📦</div>
+  <h3>Chatbox AI</h3>
+  <p>AI chat application for working with different AI models.</p>
+  <a class="visit" href="https://chatboxai.app" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Msty">
+  <div class="icon">🧩</div>
+  <h3>Msty</h3>
+  <p>AI application for interacting with local and online models.</p>
+  <a class="visit" href="https://msty.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Cherry AI">
+  <div class="icon">🍒</div>
+  <h3>Cherry AI</h3>
+  <p>AI assistant and multi-model AI workspace.</p>
+  <a class="visit" href="https://cherryai.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="PrivateGPT">
+  <div class="icon">🔒</div>
+  <h3>PrivateGPT</h3>
+  <p>Tools for running private AI workflows and working with documents.</p>
+  <a class="visit" href="https://privategpt.dev" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Onyx">
+  <div class="icon">⬛</div>
+  <h3>Onyx</h3>
+  <p>AI-powered knowledge and productivity platform.</p>
+  <a class="visit" href="https://www.onyx.app" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="DocsGPT">
+  <div class="icon">📑</div>
+  <h3>DocsGPT</h3>
+  <p>AI tools for asking questions and working with documents.</p>
+  <a class="visit" href="https://www.docsgpt.cloud" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Anara">
+  <div class="icon">📚</div>
+  <h3>Anara</h3>
+  <p>AI-powered research and knowledge tools.</p>
+  <a class="visit" href="https://anara.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Paper2Gal">
+  <div class="icon">📄</div>
+  <h3>Paper2Gal</h3>
+  <p>AI-powered tools for transforming and working with research content.</p>
+  <a class="visit" href="https://paper2gal.com" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Hyper Space">
+  <div class="icon">🌐</div>
+  <h3>Hyper Space</h3>
+  <p>Explore AI and technology resources through the platform.</p>
+  <a class="visit" href="https://hyper.space" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="G4F">
+  <div class="icon">🔧</div>
+  <h3>G4F</h3>
+  <p>Explore an open-source AI interface and related projects.</p>
+  <a class="visit" href="https://g4f.dev" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Lemonade Server">
+  <div class="icon">🍋</div>
+  <h3>Lemonade Server</h3>
+  <p>Local AI software and model-serving tools.</p>
+  <a class="visit" href="https://lemonade-server.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Noi">
+  <div class="icon">🌐</div>
+  <h3>Noi</h3>
+  <p>AI-powered workspace and browsing tools.</p>
+  <a class="visit" href="https://noib.app" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+</div>
+
+
+<!-- OTHER AI TOOLS -->
+<h2 class="category-title">🧰 <span>More AI Tools</span></h2>
+
+<div class="grid">
+
+<div class="card" data-name="Solar Chat">
+  <div class="icon">☀️</div>
+  <h3>Solar Chat</h3>
+  <p>AI chat experience powered by Upstage technology.</p>
+  <a class="visit" href="https://solar-chat.upstage.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="IS.H">
+  <div class="icon">💡</div>
+  <h3>ISH Chat</h3>
+  <p>Explore this AI chat service and its available features.</p>
+  <a class="visit" href="https://ish.chat" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Arena AI">
+  <div class="icon">🏟️</div>
+  <h3>Arena AI</h3>
+  <p>Compare and explore AI models through an interactive platform.</p>
+  <a class="visit" href="https://arena.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Canary Arena">
+  <div class="icon">🦜</div>
+  <h3>Canary Arena</h3>
+  <p>Explore AI models and experiments through an AI arena.</p>
+  <a class="visit" href="https://canaryarena.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Ecosia">
+  <div class="icon">🌱</div>
+  <h3>Ecosia</h3>
+  <p>Search engine with AI-powered search features.</p>
+  <a class="visit" href="https://www.ecosia.org" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Solar">
+  <div class="icon">☀️</div>
+  <h3>Solar AI</h3>
+  <p>Explore AI models and tools from Upstage.</p>
+  <a class="visit" href="https://solar-chat.upstage.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Sarvam">
+  <div class="icon">🇮🇳</div>
+  <h3>Sarvam AI</h3>
+  <p>AI platform focused on Indian languages and AI applications.</p>
+  <a class="visit" href="https://dashboard.sarvam.ai" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+<div class="card" data-name="Hyper Space">
+  <div class="icon">🚀</div>
+  <h3>Hyper Space</h3>
+  <p>Explore AI and technology services.</p>
+  <a class="visit" href="https://hyper.space" target="_blank" rel="noopener noreferrer">Open Tool ↗</a>
+</div>
+
+</div>
+
+
+<section class="info">
+  <h2>🤖 About These AI Tools</h2>
+
+  <p>
+    Resource Vault brings together AI assistants, research platforms,
+    writing tools, developer platforms and local AI software in one place.
+    Each button takes you to the respective third-party website.
+  </p>
+
+  <p>
+    Availability, pricing, account requirements and features are controlled
+    by the individual service providers and may change over time.
+  </p>
+
+  <p>
+    Resource Vault is an independent directory and is not affiliated with
+    or endorsed by the third-party services listed above.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  © 2026 ABQ Online.
+</footer>
+
+
+<script>
+function filterTools(){
+  const query=document.getElementById("search").value.toLowerCase().trim();
+  const cards=document.querySelectorAll(".card");
+
+  cards.forEach(card=>{
+    const name=card.dataset.name.toLowerCase();
+    const text=card.innerText.toLowerCase();
+
+    card.style.display=
+      (!query || name.includes(query) || text.includes(query))
+      ? "flex"
+      : "none";
+  });
+}
+</script>
+
+</body>
+</html>
