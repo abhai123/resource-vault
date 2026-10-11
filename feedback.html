@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Feedback | PDF Manager</title>
+  <meta name="description" content="Share feedback, report bugs, or suggest improvements for PDF Manager.">
+
+  <link rel="canonical" href="https://abqtools.vercel.app/feedback.html">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3291192487089281" crossorigin="anonymous"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JKF8PCEC7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0JKF8PCEC7');
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 14px 20px;
+    }
+
+    .nav {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #172033;
+      font-size: 21px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #344054;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 42px auto;
+      padding: 0 18px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 38px);
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      color: #667085;
+      margin: 0;
+    }
+
+    .form-card {
+      background: #ffffff;
+      border: 1px solid #e4e7ec;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 28px rgba(16, 24, 40, 0.05);
+    }
+
+    .notice {
+      background: #f0f4ff;
+      border-left: 4px solid #5b5bd6;
+      padding: 13px 15px;
+      border-radius: 6px;
+      color: #344054;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .field {
+      margin-bottom: 22px;
+    }
+
+    label,
+    legend {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .optional {
+      font-weight: normal;
+      color: #667085;
+      font-size: 13px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid #cfd4dc;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #172033;
+      font: inherit;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid #c7d2fe;
+      border-color: #5558d9;
+    }
+
+    textarea {
+      min-height: 145px;
+      resize: vertical;
+    }
+
+    fieldset {
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+
+    .ratings {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .rating-option {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid #d0d5dd;
+      border-radius: 8px;
+      padding: 10px 12px;
+      cursor: pointer;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    .rating-option input {
+      accent-color: #5558d9;
+    }
+
+    .help {
+      font-size: 13px;
+      color: #667085;
+      margin-top: 6px;
+    }
+
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 9px;
+      padding: 14px 18px;
+      background: #5558d9;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #4144bd;
+    }
+
+    .privacy-note {
+      text-align: center;
+      font-size: 13px;
+      color: #667085;
+      margin-top: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      color: #667085;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #5558d9;
+      text-decoration: none;
+      margin: 0 7px;
+    }
+
+    @media (max-width: 520px) {
+      .form-card {
+        padding: 20px 16px;
+      }
+
+      .nav {
+        align-items: flex-start;
+      }
+
+      .ratings {
+        flex-direction: column;
+      }
+
+      .rating-option {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="/">
+      <img src="/images/pdf-manager-logo.png"
+           alt="PDF Manager logo"
+           onerror="this.style.display='none'">
+      <span>PDF Manager</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/tools/pdf/pdf-tools.html">PDF Tools</a>
+      <a href="/faq.html">FAQ</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="intro">
+    <h1>Share Your Feedback</h1>
+    <p>
+      Your feedback helps us improve PDF Manager and make our tools
+      more useful and reliable.
+    </p>
+  </section>
+
+  <section class="form-card">
+
+    <div class="notice">
+      <strong>Before reporting a problem:</strong>
+      Please check our FAQ first. Your question may already have an answer.
+    </div>
+
+    <form action="https://formspree.io/f/mdeaddrv" method="POST">
+
+      <div class="field">
+        <fieldset>
+          <legend>Evaluation</legend>
+
+          <div class="ratings">
+            <label class="rating-option">
+              <input type="radio" name="evaluation" value="1 - Very good" required>
+              1 - Very good
+            </label>
+
+            <label class="rating-option">
+              <input type="radio" name="evaluation" value="2 - Good">
+              2 - Good
+            </label>
+
+            <label class="rating-option">
+              <input type="radio" name="evaluation" value="3 - Average">
+              3 - Average
+            </label>
+
+            <label class="rating-option">
+              <input type="radio" name="evaluation" value="4 - Acceptable">
+              4 - Acceptable
+            </label>
+
+            <label class="rating-option">
+              <input type="radio" name="evaluation" value="5 - Bad">
+              5 - Bad
+            </label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="field">
+        <label for="feedback-type">Feedback type</label>
+
+        <select id="feedback-type" name="feedback_type" required>
+          <option value="">Choose an option</option>
+          <option value="Bug report">Report an error or bug</option>
+          <option value="Suggestion">Suggest an improvement</option>
+          <option value="Question">Ask a question</option>
+          <option value="General feedback">General feedback</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="comment">Comment</label>
+
+        <textarea
+          id="comment"
+          name="message"
+          placeholder="Describe your feedback, suggestion, or problem..."
+          minlength="5"
+          maxlength="5000"
+          required></textarea>
+      </div>
+
+      <div class="field">
+        <label for="name">
+          Your name <span class="optional">(optional)</span>
+        </label>
+
+        <input
+          type="text"
+          id="name"
+          name="name"
+          maxlength="100"
+          autocomplete="name">
+      </div>
+
+      <div class="field">
+        <label for="email">
+          Email for enquiries <span class="optional">(optional)</span>
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          maxlength="254"
+          autocomplete="email">
+
+        <p class="help">
+          Provide your email if you would like us to reply.
+        </p>
+      </div>
+
+      <input type="hidden" name="_subject" value="New PDF Manager Feedback">
+
+      <button type="submit">Submit Feedback</button>
+
+      <p class="privacy-note">
+        Please do not include passwords or sensitive personal information.
+      </p>
+
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 PDF Manager</p>
+
+  <p>
+    <a href="/about.html">About</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/contact.html">Contact</a>
+  </p>
+</footer>
+
+</body>
+    </html>
